@@ -1,0 +1,106 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Бюрократия</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>3 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>В бюрократическом учереждении работает <span class="tex-math-text">N</span> бюрократов. У каждого бюрократа есть список других бюрократов (возможно, пустой), к которым он может послать посетителя.
+            Требуется проверить может ли так случиться, что посетитель будет вечно ходить по замкнутому кругу из бюрократов, и если может
+            - вывести такой порочный цикл.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержится одно число <span class="tex-math-text">N</span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgTiBcbGVxc2xhbnQgMTAwMDAw.png"/></span>) - количество бюрократов. В <span class="tex-math-text">i</span> (<span class="tex-math-text">i</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">N - 1</span>) из следующих <span class="tex-math-text">N</span> строк перечислены через пробел номера бюрократов, к которым может послать <span class="tex-math-text">i</span>-ый бюрократ. В последней строке написано "EOF". Общее число чисел во входе не превосходит <span class="tex-math-text">500001</span>.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>В первой строке одно число - длина цикла (0 если цикла нет). Во второй строке номера бюрократов в цикле (в том порядке, в
+            котором они в цикле расположены) через пробел. Если цикла нет, то вторая строка должна быть пустой.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+1
+2
+0
+EOF
+</pre></td>
+<td><pre>3
+1 2 0
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4
+
+2
+3
+1
+EOF
+</pre></td>
+<td><pre>3
+2 3 1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4
+1 3
+3
+
+2
+EOF
+</pre></td>
+<td><pre>0
+
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

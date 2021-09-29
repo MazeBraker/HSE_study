@@ -1,0 +1,94 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Файловая система</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам дан список всех файлов в файловой системе. Вам необходимо вывести все непустые директории в лексикографическом порядке.
+            
+         </p></span><p>Гарантируется, что все пути начинаются от корня файловой системы. Гарантируется, что все пути состоят из слешей, латинских
+         символов, цифр и точек. Гарантируется, что два слеша никогда не стоят подряд.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Входной файл содержит все пути в некоторой файловой системе. Каждый путь содержится в отдельной строке. Размер входного файла
+            не больше 10Kb.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите все непустые директории в этой файловой системе в лексикографическом порядке. Каждый путь должен начиться со слеша
+            и заканчиваться слешом.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>/docs/README.txt
+/docs/LICENSE.txt
+/boot/grub
+/init
+</pre></td>
+<td><pre>/
+/boot/
+/docs/
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>/home/guest/homework/A/main.cpp
+/root/test.cpp
+/root/tests/01
+/root/tests/01.a
+/bin/bash
+/usr/bin/perl
+</pre></td>
+<td><pre>/
+/bin/
+/home/
+/home/guest/
+/home/guest/homework/
+/home/guest/homework/A/
+/root/
+/root/tests/
+/usr/
+/usr/bin/
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

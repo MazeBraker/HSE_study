@@ -1,0 +1,219 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">I. Крестики-нолики</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам предстоит сыграть в крайне простую игру — крестики-нолики. Напомним вкратце правила. </p></span><p>Крестики-нолики — игра между двумя противниками на квадратном поле <span class="tex-math-text">3 × 3</span> клетки. Игроки по очереди ставят на свободные клетки поля знаки (один всегда крестики, другой всегда нолики). Первый, выстроивший
+         в ряд <span class="tex-math-text">3</span> своих фигуры по вертикали, горизонтали или диагонали, выигрывает. Первый ход делает игрок, ставящий крестики. 
+      </p>
+<p>Естественно, вы хотите, чтобы ваша программа выигрывала всегда, когда это возможно, и сводила партию в ничью всегда, когда
+         возможно свести партию в ничью, но невозможно выиграть.
+      </p>
+</div>
+<h2>Формат взаимодействия с тестирующей системой</h2>
+<div class="input-specification"><span style="">
+<p>Это интерактивная задача. </p></span><p>При запуске программы на стандартный поток ввода поступает слово «<span class="tex-monospace">CROSSES</span>», если вы ставите крестики, и «<span class="tex-monospace">NOUGHTS</span>», если вы ставите нолики. 
+      </p>
+<p>Для каждого хода выведите на стандартный поток два числа — координаты нарисованного вами знака (первое число — номер столбца, второе — номер строки). </p>
+<p>На каждый ваш ход вводится ход вашего соперника (если он ходит первым, его ход поступает сразу после первой строки при запуске программы). Каждый
+         ход состоит из двух целых чисел <span class="tex-math-text">x, y</span> — координат нарисованного им знака (первое число — номер столбца, второе — номер строки). 
+      </p>
+<p>В случае, если после вашего хода вы выиграли, в следующей строке выведите «<span class="tex-monospace">WIN</span>». 
+      </p>
+<p>В случае, если после хода соперника вы проиграли, выведите «<span class="tex-monospace">LOSING</span>». 
+      </p>
+<p>В случае, если после вашего хода или хода соперника наступила ничья, выведите «<span class="tex-monospace">DRAW</span>». 
+      </p>
+<p>После вывода строки «<span class="tex-monospace">WIN</span>», «<span class="tex-monospace">LOSING</span>» или «<span class="tex-monospace">DRAW</span>» ваша программа должна завершиться.
+      </p>
+</div>
+<h2>Пример</h2>
+<table class="sample-tests" style="border-collapse: collapse;">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+<th colspan="3" style="text-align: center !important; vertical-align: middle !important;">Поле</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3"><pre>CROSSES</pre></td>
+<td rowspan="3"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre></pre></td>
+<td rowspan="3"><pre>1 1</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre>2 2</pre></td>
+<td rowspan="3"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre></pre></td>
+<td rowspan="3"><pre>1 2</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre>1 3</pre></td>
+<td rowspan="3"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre></pre></td>
+<td rowspan="3"><pre>3 1</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre>2 3</pre></td>
+<td rowspan="3"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre></pre></td>
+<td rowspan="3"><pre>2 1</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td rowspan="3"><pre></pre></td>
+<td rowspan="3"><pre>WIN</pre></td>
+<td bgcolor="red" style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td bgcolor="red" style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td bgcolor="red" style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>X</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+<tr>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre>O</pre></td>
+<td style="border: 1px solid #bfbfbf; text-align: center !important; vertical-align: middle !important; height: 40px !important; width: 40px !important;"><pre></pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Вывод каждой строки должен завершаться переводом строки и сбросом буфера потока вывода. Для этого используйте <span class="tex-monospace">flush(output)</span> на языке Pascal, <span class="tex-monospace">fflush(stdout)</span> в С/C++ или <span class="tex-monospace">cout.flush()</span> в C++, <span class="tex-monospace">sys.stdout.flush()</span> на языке Python, <span class="tex-monospace">System.out.flush()</span> на языке Java.
+         </p>
+<p>Пример <b>никак не связан</b> с первым тестом.</p></span></div>
+</div>

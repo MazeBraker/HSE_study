@@ -1,0 +1,106 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">B. Множество строк</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>3 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Реализуйте структуру данных, являющуюся множеством строк. Структура должна поддерживать вставку, проверку существования и
+            удаление элементов. Реализация должна основываться на хеш-таблице с разрешением коллизий методом цепочек.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла содержит число запросов <span class="tex-math-text">N</span> (<span class="tex-math-text">0 ≤ N ≤ 10<sup>6</sup></span>). 
+         </p></span><p>Следующие <span class="tex-math-text">N</span> строк содержат запросы, представленные целым числом <span class="tex-math-text">t<sub>i</sub></span> и строкой <span class="tex-math-text">s<sub>i</sub></span> (<span class="tex-math-text">-1 ≤ t<sub>i</sub> ≤ 1</span>, <span class="tex-math-text">|s<sub>i</sub>| ≤ 10</span>). Строки состоят только из маленьких латинских символов. 
+      </p>
+<p>Если <span class="tex-math-text">t<sub>i</sub></span> равняется <span class="tex-math-text">1</span>, добавьте строку к множеству. Если <span class="tex-math-text">t<sub>i</sub></span> равняется <span class="tex-math-text">-1</span>, удалите строку из множества. Если <span class="tex-math-text">t<sub>i</sub></span> равняется нулю, выведите <span class="tex-math-text">1</span> или <span class="tex-math-text">0</span> в зависимости от того, есть эта строка в множестве или нет. 
+      </p>
+<p>Не гарантируется, что на момент добавления строки, ее нет в множестве. Не гарантируется, что на момент удаления строки, она
+         есть в множестве. Повторно вставлять строки в множество не следует, то есть это именно множество с точки зрения математики.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На каждый запрос проверки наличия элемента выведите <span class="tex-math-text">1</span> или <span class="tex-math-text">0</span>, по одному в строке.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10
+0 iii
+1 fbw
+1 fbw
+0 fbw
+1 isn
+-1 isn
+0 isn
+1 isn
+0 isn
+0 fbw
+</pre></td>
+<td><pre>0
+1
+0
+1
+1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10
+1 wxfdqygqun
+0 wxfdqygqun
+-1 pnpgqympmy
+0 pnpgqympmy
+1 pnpgqympmy
+1 otxkrurtdm
+0 pnpgqympmy
+1 twhqrplevw
+1 pnpgqympmy
+1 otvptwyypy
+</pre></td>
+<td><pre>1
+0
+1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Не стоит сравнивать строки на равенство, если различаются их хеши.</p></span></div>
+</div>

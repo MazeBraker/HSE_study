@@ -1,0 +1,89 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">B. Боб и дерево</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>4 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Бобу для сдачи сессии необходимо реализовать классическое красно-черное дерево. Дерево должно уметь вставлять элемент по ключу
+            и проверять наличие элемента по ключу. 
+         </p></span><p>При вставке уже существующего ключа новый элемент необходимо проигнорировать. </p>
+<p>После всех запросов нужно будет вывести само дерево, образованное выполнением всех запросов. </p>
+<p>В коде вашей программы запрещается использовать контейнеры из стандартной библиотеки, позволяющие эффективно работать с множествами.<br/>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла содержит натуральное число <span class="tex-math-text">N</span> — число запросов к структуре данных (<span class="tex-math-text">1 ≤ N ≤ 10<sup>6</sup></span>). 
+         </p></span><p>Последующие <span class="tex-math-text">N</span> строк содержат по два целых числа <span class="tex-math-text">t<sub>i</sub></span> и <span class="tex-math-text">v<sub>i</sub></span> (<span class="tex-math-text">t<sub>i</sub> ∈ {0, 1}</span>, <span class="tex-math-text">|v<sub>i</sub>| ≤ 10<sup>9</sup></span>) — запросы к структуре данных. 
+         <ul>
+<li>0 <span class="tex-math-text">v<sub>i</sub></span> — вставить в дерево ключ <span class="tex-math-text">v<sub>i</sub></span>; 
+            </li>
+<li>1 <span class="tex-math-text">v<sub>i</sub></span> — проверить наличие ключа <span class="tex-math-text">v<sub>i</sub></span> в дереве. 
+            </li>
+</ul>
+</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На каждый запрос поиска выведите "Yes", если указанный ключ присутствует в дереве, и "No" в противном случае. После ответов
+            на запросы нужно вывести само дерево в следующем формате. Сначала должно быть целое число <span class="tex-math-text">N</span> — количество вершин в дереве. В следующих <span class="tex-math-text">N</span> строках нужно вывести описание очередной вершины. Каждое описание должно иметь формат:<br/><span class="tex-math-text">KEY LEFTKEY RIGHTKEY COLOR</span>, где <span class="tex-math-text">KEY</span> — ключ в вершнины. <span class="tex-math-text">LEFTKEY</span> и <span class="tex-math-text">RIGHTKEY</span> — ключи левого и правого сына (null, если соответствующий сын фиктивная листовая вершина NIL), <span class="tex-math-text">COLOR</span> — символ R или B в зависимости от цвета. Описание можно выводить в произвольном порядке.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7
+0 -3
+1 0
+0 0
+0 0
+1 0
+1 -3
+1 7
+</pre></td>
+<td><pre>No
+Yes
+Yes
+No
+2
+-3 null 0 B
+0 null null R
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Боб хочет сдать задачу за минимальное количество попыток, поэтому он догадался, что можно проверять не только правильность
+            выполнения своих тестов, но и свойства красно-черного дерева (это очень просто делать прямо во время исполнения программы
+            после каждой операции с деревом). 
+         </p></span><p>Однако, он понимает, что отправлять такой код в тестирующую систему нельзя - полный обход дерева во время проверки занимает
+         линейное время и итоговая асимптотика решения получается квадратичной, если не выключить проверку перед сдачей. 
+      </p>
+<p>Проверять нужно свойства вообще дерева поиска и свойства именно красно-черного дерева.</p>
+</div>
+</div>

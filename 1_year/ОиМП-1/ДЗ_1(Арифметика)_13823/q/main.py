@@ -1,0 +1,11 @@
+N = int(input())
+h = N // 3600 % 24
+m1 = int(N // 60 % 60 // 10)
+m2 = int(N // 60 % 60 % 10)
+s1 = int(N % 60 / 10)
+s2 = int(N % 60 % 10)
+print(h, end=':')
+print(m1, end='')
+print(m2, end=':')
+print(s1, end='')
+print(s2)

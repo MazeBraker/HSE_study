@@ -1,0 +1,65 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Расстановка станций</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Есть <span class="tex-math-text">n</span> домов, некоторые из которых соединены дорогами с односторонним движением.
+         </p></span><p>Необходимо выбрать минимальное количество домов, к которым нужно пристроить станции. Станции должны располагаться таким образом,
+         чтобы из любого дома можно было доехать по дорогам до одной из станций.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входного файла задано число <span class="tex-math-text">n</span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgbiBcbGVxc2xhbnQgM1wsMDAw.png"/></span>). Во второй строке записано количество дорог <span class="tex-math-text">m</span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgbSBcbGVxc2xhbnQgMTAwXCwwMDA=.png"/></span>). Далее следует описание дорог в формате <span class="tex-math-text">a<sub>i</sub></span> <span class="tex-math-text">b<sub>i</sub></span>, означающее, что по <span class="tex-math-text">i</span>-й дороге разрешается движение от дома <span class="tex-math-text">a<sub>i</sub></span> к дому <span class="tex-math-text">b<sub>i</sub></span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgYV9pLCBiX2kgXGxlcXNsYW50IG4=.png"/></span>).
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>В первой строке выведите минимальное количество станций <span class="tex-math-text">K</span>, которое необходимо построить. Во второй строке выведите <span class="tex-math-text">K</span> чисел в произвольном порядке — дома, к которым необходимо пристроить станции. Если оптимальных решений несколько, выведите любое.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+7
+1 2
+2 3
+3 1
+2 1
+2 3
+3 4
+2 5
+</pre></td>
+<td><pre>2
+5
+4
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,82 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">G. Карточки</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Очередной день на ФКН. Сегодня утром вы не захотели идти на лекцию по алгоритмам. Вместо этого вы придумали себе более увлекательное
+            занятие: перед вами разложено <span class="tex-math-text">n</span> карточек, с обеих сторон которых написаны буквы. Перед уходом ваш друг написал какую то строчку, оставив записку рядом. И
+            вот вы придумали задачу — а возможно ли сложить эту строчку, используя имеющиеся карты? Каждую карту можно переворачивать и менять местами с другими.
+            Более того, некоторые карты можно вовсе не использовать. Ваша задача — ответить на поставленный вопрос.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На первой строке стандартного ввода будет задано число <span class="tex-math-text">n</span> (<span class="tex-math-text">1 ≤ n ≤ 100 000</span>) — количество карточек перед вами. В последующих <span class="tex-math-text">n</span> строках будут заданы сами карточки. Каждая из этих строк содержит ровно по две строчные латинские буквы. Первая из них — символ, написанный на лицевой стороне, а вторая — символ на обратной стороне. В последней строке задана сама строка из маленьких латинских букв. Она непуста и состоит не более,
+            чем из <span class="tex-math-text">100 000</span> символов.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Если возможно сложить заданную строку, выведите набор чисел, равный по размеру длине строки. При этом <span class="tex-math-text">i</span>-е число должно быть равно по модулю номеру карточки, которая будет соответствовать <span class="tex-math-text">i</span>-ому символу строки. Это число должны быть положительным, если карточка взята лицевой стороной, и отрицательно, если карточка
+            взята обратной стороной.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+ab
+ab
+bc
+bca
+</pre></td>
+<td><pre>-1 -3 2
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+ab
+ab
+bc
+bcc
+</pre></td>
+<td><pre>IMPOSSIBLE
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

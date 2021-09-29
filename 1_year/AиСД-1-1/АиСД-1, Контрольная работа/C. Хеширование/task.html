@@ -1,0 +1,96 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Хеширование</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>В хеш-таблице <span class="tex-math-text">n</span> ячеек, пронумерованных от <span class="tex-math-text">0</span> до <span class="tex-math-text">n - 1</span> включительно. В таблице хранятся целые числа и используется разрешение коллизий при помощи цепочек. В таблице может храниться
+            несколько одинаковых чисел. При добавлении числа <span class="tex-math-text">x</span> в таблицу, оно помещается в ячейку (<span class="tex-math-text">x</span> mod <span class="tex-math-text">n</span>), где <span class="tex-math-text">x</span> mod <span class="tex-math-text">n</span> — остаток от деления <span class="tex-math-text">x</span> на <span class="tex-math-text">n</span>. Чем меньше элементов в одной ячейке таблицы, тем быстрее поиск.
+         </p></span><p>Определим эффективность хеширования следующим образом:</p>
+<p>
+<div class="tex-math-block"><img class="tex-math" src="/testsys/tex/render/XGxlZnQoMSAtIFxmcmFje1xzdW1fe2k9MH1ee24gLSAxfXxuX3tpfSAtIDF8fXsybiAtIDJ9XHJpZ2h0KSBcY2RvdCAxMDBcJQ==.png"/></div>
+</p>
+<p>где <span class="tex-math-text">n<sub>i</sub></span> — число элементов в <span class="tex-math-text">i</span>-й ячейке. 
+      </p>
+<p>Вычислите эффективность хеширования (в процентах) для заданной хеш-таблицы.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержится целое число <span class="tex-math-text">n</span> (<span class="tex-math-text">2 ≤ n ≤ 100</span>) — количество ячеек в хеш-таблице. Вторая строка содержит <span class="tex-math-text">n</span> целых чисел <span class="tex-math-text">x<sub>i</sub></span> через пробел — это числа, хранящиеся в хеш-таблице (<span class="tex-math-text">0 ≤ x<sub>i</sub> ≤ 10<sup>9</sup></span>).
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите единственное число — эффективность хеш-таблицы в процентах с точностью не менее двух знаков после запятой.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+1 2 3 4 5
+</pre></td>
+<td><pre>100.000000
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>8
+33 1081 617 65 737 9 113 41
+</pre></td>
+<td><pre>0.000000
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+27 31 1001 83 19
+</pre></td>
+<td><pre>75.000000
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

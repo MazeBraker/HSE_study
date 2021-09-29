@@ -1,0 +1,94 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Сортировка строк</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам требуется лексикографически отсортировать поступающие на вход строки либо по возрастанию, либо по убыванию.</p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входного файла указан порядок сортировки: либо слово ASCENDING (для сортировки по возрастанию), либо DESCENDING
+            (для сортировки по убыванию). Далее идут строки, которые нужно сортировать. Количество строк не превосходит 1000. Каждая строка
+            состоит из символов ASCII с кодами от 32 до 126, длина строки не превосходит 100.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Напечатайте строки в отсортированном порядке. Для сравнения строк друг с другом достаточно использовать стандартные операторы
+            &lt; или &gt;, определённые для объектов std::string.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>ASCENDING
+one
+two
+three
+four
+five
+</pre></td>
+<td><pre>five
+four
+one
+three
+two
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>DESCENDING
+one
+two
+three
+four
+five
+</pre></td>
+<td><pre>two
+three
+one
+four
+five
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Обратите внимание: строки входного файла могут содержать пробельные символы. Лучше все строки, в том числе и первую, считывать
+            через getline.
+         </p></span></div>
+</div>

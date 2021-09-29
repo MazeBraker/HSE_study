@@ -1,0 +1,107 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Сапер</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам необходимо построить поле для игры "Сапер" по его конфигурации – размерам и координатам расставленных на нем мин.</p></span><p>Вкратце напомним правила построения поля для игры "Сапер": 
+         <ul>
+<li>Поле состоит из клеток с минами и пустых клеток </li>
+<li>Клетки с миной обозначаются символом <span style="font-weight:bold;">*</span>
+</li>
+<li>Пустые клетки содержат число <span class="tex-math-text">k<sub>i,j</sub>, 0≤ k<sub>i, j</sub> ≤ 8</span> – количество мин на соседних клетках. <span style="font-style:italic;">Соседними клетками являются восемь клеток, имеющих смежный угол или сторону.</span>
+</li>
+</ul>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержатся три числа: <span class="tex-math-text">N, 1 ≤ N ≤ 100</span> - количество строк на поле, <span class="tex-math-text">M, 1 ≤ M ≤ 100</span> - количество столбцов на поле, <span class="tex-math-text">K, 0 ≤ K ≤ N ⋅ M</span> - количество мин на поле.<br/></p></span><p>В следующих <span class="tex-math-text">K</span> строках содержатся по два числа с координатами мин: <span class="tex-math-text">p, 1 ≤ p ≤ N</span> - номер строки мины, <span class="tex-math-text">q, 1 ≤ 1 ≤ M</span> - номер столбца мины.
+      </p>
+<p></p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите построенное поле, разделяя строки поля переводом строки, а столбцы - пробелом.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 2 2
+1 1
+2 2
+</pre></td>
+<td><pre>* 2
+2 *
+1 1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 2 0
+</pre></td>
+<td><pre>0 0
+0 0
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 4 4
+1 3
+2 1
+4 2
+4 4
+</pre></td>
+<td><pre>1 2 * 1 
+* 2 1 1 
+2 2 2 1 
+1 * 2 * 
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

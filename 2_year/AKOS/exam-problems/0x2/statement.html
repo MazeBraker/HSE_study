@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+        package="c.ints"
+        id="XXX"
+        type="standard">
+  <statement language="ru_RU">
+    <description>
+
+<p>Дана подпрограмма на языке ассемблера архитектуры x86:</p>
+
+<pre>func:
+movl    4(%esp), %edx
+movl    12(%esp), %eax
+movl    8(%esp), %ecx
+movl    (%edx,%eax,4), %eax
+leal    (%eax,%eax,2), %eax
+addl    (%edx,%ecx,4), %eax
+movl    %eax, %edx
+shrl    $31, %eax
+addl    %edx, %eax
+sarl    %eax
+ret</pre>
+
+<p>Запишите ее на языке Си.</p>
+
+<p>Внимание, статус AC (Accepted for testing) означает,
+что программа успешно скомпилировалась. Запуск на тестах
+не производился.</p>
+
+</description>
+  </statement>
+<review_comments>
+</review_comments>
+</problem>

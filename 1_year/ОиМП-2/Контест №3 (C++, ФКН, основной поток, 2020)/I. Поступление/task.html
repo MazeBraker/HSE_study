@@ -1,0 +1,78 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">I. Поступление</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Напишите программу, которая будет по списку поступающих и университетов определять, кто именно поступит в каждый университет.
+            
+         </p></span><p>В каждом университете есть лимит мест, у каждого абитуриента есть определенный набранный балл и список предпочтений. </p>
+<p>Распределение происходит следующим образом: абитуриенты сортируются по убыванию баллов, при равенстве - по возрастанию даты
+         рождения и, затем, по фамилии и имени. 
+      </p>
+<p>Далее каждый абитуриент по очереди зачисляется в первый университет из его списка, в котором еще остались места (если таких
+         нет - не зачисляется никуда).
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит одно целое число <span class="tex-math-text">N</span> от <span class="tex-math-text">1</span> до <span class="tex-math-text">10<sup>4</sup></span> - количество университетов. 
+         </p></span><p>Следующие <span class="tex-math-text">N</span> строк содержат строку их латинских символов длиной от <span class="tex-math-text">5</span> до <span class="tex-math-text">15</span> символов и число от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - название и максимальное количество студентов для очередного университета. 
+      </p>
+<p>Следующая строка содержит целое число <span class="tex-math-text">M</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>4</sup></span> - количество абитуриентов. 
+      </p>
+<p>Далее идут <span class="tex-math-text">M</span> строк, каждая из которых содержит две строки длиной от <span class="tex-math-text">5</span> до <span class="tex-math-text">15</span> символов - имя и фамилию очередного абитурента, затем <span class="tex-math-text">3</span> целых числа от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - число, месяц и год его рождения, целое число от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - балл студента, целое число <span class="tex-math-text">k</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">200</span> - количество университетов, в которые абитуриент готов поступать, и <span class="tex-math-text">k</span> названий университетов из списка в первой части входа.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для каждого университета в алфавитном порядке выведите его название, затем через табуляцию - имена и фамилии поступивших в
+            него студентов, отсортированных по фамилии, имени и дате рождения.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+MSU 1
+HSE 2
+MIPT 100
+5
+Ivan Ivanov 1 1 1900 100 2 MSU HSE
+Petr Petrov 2 1 1900 90 2 MSU HSE
+Alexander Sidorov 3 1 1900 110 2 MIPT HSE
+Ivan Petrov 3 1 1900 100 3 HSE MSU MIPT
+Petr Ivanov 4 1 1900 80 1 HSE
+</pre></td>
+<td><pre>HSE	Ivan Petrov	Petr Petrov
+MIPT	Alexander Sidorov
+MSU	Ivan Ivanov
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

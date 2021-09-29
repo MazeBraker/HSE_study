@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+        package="c.ints"
+        id="XXX"
+        type="standard">
+  <statement language="ru_RU">
+    <description>
+
+<p>Определите тип данных <tt>mysem_t</tt>.
+Напишите две функции:</p>
+
+<pre>
+void mysem_down(mysem_t *sem, int val);
+void mysem_up(mysem_t *sem, int val);
+void mysem_init(mysem_t *sem, int initval);
+</pre>
+
+<p>Которые выполняют операции down и up для семафора
+на величину val. Для реализации используйте только atomic
+переменные, другие средства синхронизации/блокировки
+использовать запрещено.</p>
+
+<p>Функция mysem_init инициализирует семафор начальным значением
+initvar.</p>
+
+<p>Внимание, статус AC (Accepted for testing) означает,
+что программа успешно скомпилировалась. Запуск на тестах
+не производился.</p>
+
+</description>
+  </statement>
+<review_comments>
+</review_comments>
+</problem>

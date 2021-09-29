@@ -1,0 +1,82 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">L. Функция Split</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам требуется написать на C++ функцию со следующим заголовком: </p></span><p>std::vector&lt;std::string&gt; Split(const std::string&amp; str, char delimiter); </p>
+<p>Функция должна вернуть вектор строк, полученный разбиением строки str на части по указанному символу-разделителю delimiter.
+         Если разделитель встретился в начале или в конце строки, то в начале (соответственно, в конце) вектора с результатом должна
+         быть пустая строка. Если два разделителя встретились рядом, то пустая строка между ними тоже должна попасть в ответ. Для пустой
+         строки надо вернуть пустой вектор.
+      </p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>What_is_your_name?
+_
+</pre></td>
+<td><pre>What
+is
+your
+name?
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>13-24--08-11-2014
+-
+</pre></td>
+<td><pre>13
+24
+
+08
+11
+2014
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Возможно, вам будет полезна функция substr класса std::string, выделяющая из строки подстроку с указанной позиции и заданной
+            длины. Сдайте в систему только код функции с необходимыми директивами #include. Ваша функция будет протестирована с помощью
+            нашей программы.
+         </p></span></div>
+</div>

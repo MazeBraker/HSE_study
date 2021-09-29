@@ -1,0 +1,95 @@
+
+
+F. Число строк, слов и символов
+
+
+Ограничение времени
+1 секунда
+
+
+Ограничение памяти
+64Mb
+
+
+Ввод
+стандартный ввод или input.txt
+
+
+Вывод
+стандартный вывод или output.txt
+
+
+
+
+
+Дан файл. Определите сколько в нем букв (латинского алфавита), слов, строк. Выведите три найденных числа в формате, приведенном
+            в примере. Словом считается последовательность из подряд идущих букв латинского алфавита.
+         
+Пример 1
+
+
+
+Ввод
+Вывод
+
+
+
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+
+Input file contains:
+108 letters 
+20 words 
+4 lines 
+
+
+
+
+Пример 2
+
+
+
+Ввод
+Вывод
+
+
+
+
+Tau Ceti is a star in the constellation Cetus that is spectrally similar to the Sun,
+although it has only about 78% of the Sun's mass. At a distance of just under 12 light years
+from the Solar System, it is a relatively close star. Tau Ceti is metal-deficient and
+so is thought to be less likely to host rocky planets. Observations have detected more
+than 10 times as much dust surrounding Tau Ceti as is present in the Solar System.
+The star appears stable, with little stellar variation.
+
+Input file contains:
+384 letters 
+88 words 
+6 lines 
+
+
+
+
+Пример 3
+
+
+
+Ввод
+Вывод
+
+
+
+
+Grand Coulee Dam is a gravity dam on the Columbia River in the U.S. state of Washington built to produce hydroelectric power and provide irrigation.
+
+Input file contains:
+121 letters 
+26 words 
+1 lines 
+
+
+
+

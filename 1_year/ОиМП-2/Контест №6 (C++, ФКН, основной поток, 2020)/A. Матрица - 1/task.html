@@ -1,0 +1,46 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Матрица - 1</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Реализуйте шаблонный класс Matrix&lt;T&gt; для хранения прямоугольной матрицы. Тип элементов матрицы должен быть шаблонным параметром.
+            Размеры матрицы шаблонными параметрами не являются. 
+         </p></span><p>Класс должен содержать: </p>
+<p>
+<ol>
+<li>Конструктор от вектора векторов (std::vector&lt;std::vector&lt;T<span style="">&gt;</span><span style="">&gt;</span>), передаваемого по константной ссылке (списка строк матрицы). Гарантируется, что строки матрицы не пусты и все имеют одинаковый
+               размер. 
+            </li>
+<li>Оператор std::ostream&amp; operator<span style="">&lt;</span><span style="">&lt;</span>(std::ostream&amp; out, const Matrix&lt;T&gt;&amp; m) для матрицы, выводящий элементы матрицы в поток вывода out, передаваемый в оператор.
+               При этом элементы внутри одной строки должны быть разделены знаками табуляции, а строки — переносами строк. После каждой строки
+               не должно быть символа табуляции и в конце не должно быть переноса строки. 
+            </li>
+<li>Константную функцию-член size без аргументов, возвращающую пару std::pair&lt;size_t, size_t&gt; вида (число строк, число столбцов).
+               
+            </li>
+</ol>
+</p>
+<p>В качестве ответа к задаче отправьте только файл с классом и необходимыми заголовками #include для вашей задачи. </p>
+<p>Можете считать, что количество элементов в матрице не превосходит <span class="tex-math-text">10<sup>6</sup></span>.
+      </p>
+</div>
+</div>

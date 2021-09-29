@@ -1,0 +1,61 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Паросочетание</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p><span style="font-style:italic;">Двудольным графом</span> называется неориентированный граф <span class="tex-math-text">(V,E)</span>, <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/RSBcc3Vic2V0ZXEgViBcdGltZXMgVg==.png"/></span> такой, что его множество вершин <span class="tex-math-text">V</span> можно разбить на два множества <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span>, для которых <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XGZvcmFsbCAoZV8xLGVfMikgXGluIEU=.png"/></span> <span class="tex-math-text">e<sub>1</sub> ∈ A</span>, <span class="tex-math-text">e<sub>2</sub> ∈ B</span> и <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/QSBcY3VwIEIgPSBW.png"/></span>, <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/QSBcY2FwIEIgPSBcdmFybm90aGluZw==.png"/></span>. 
+         </p></span><p><span style="font-style:italic;">Паросочетанием</span> в двудольном графе называется любой набор его несмежных рёбер, то есть такой набор <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/UyBcc3Vic2V0ZXEgRQ==.png"/></span>, что для любых двух рёбер <span class="tex-math-text">e<sub>1</sub> = (u<sub>1</sub>, v<sub>1</sub>)</span>, <span class="tex-math-text">e<sub>2</sub> = (u<sub>2</sub>, v<sub>2</sub>)</span> из <span class="tex-math-text">S</span> <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/dV8xIFxuZXEgdV8y.png"/></span> и <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/dl8xIFxuZXEgdl8y.png"/></span>. 
+      </p>
+<p>Ваша задача — найти максимальное паросочетание в двудольном графе, то есть паросочетание с максимально возможным числом рёбер.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке записаны два целых числа <span class="tex-math-text">n</span> и <span class="tex-math-text">m</span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgbiwgbSBcbGVxc2xhbnQgMjUw.png"/></span>), где <span class="tex-math-text">n</span> — число вершин в множестве <span class="tex-math-text">A</span>, а <span class="tex-math-text">m</span> — число вершин в <span class="tex-math-text">B</span>. 
+         </p></span><p>Далее следуют <span class="tex-math-text">n</span> строк с описаниями рёбер — <span class="tex-math-text">i</span>-я вершина из <span class="tex-math-text">A</span> описана в <span class="tex-math-text">(i+1)</span>-й строке файла. Каждая из этих строк содержит номера вершин из <span class="tex-math-text">B</span>, соединённых с <span class="tex-math-text">i</span>-й вершиной <span class="tex-math-text">A</span>. Гарантируется, что в графе нет кратных ребер. Вершины в <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span> нумеруются независимо (с единицы). Список завершается числом <span class="tex-math-text">0</span>.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Первая строка выходного файла должна содержать одно целое число <span class="tex-math-text">l</span> — количество рёбер в максимальном паросочетании. Далее следуют <span class="tex-math-text">l</span> строк, в каждой из которых должны быть два целых числа <span class="tex-math-text">u<sub>j</sub></span> и <span class="tex-math-text">v<sub>j</sub></span> — концы рёбер паросочетания в <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span> соотвественно.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 2
+1 2 0
+2 0
+</pre></td>
+<td><pre>2
+1 1
+2 2
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

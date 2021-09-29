@@ -1,0 +1,56 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">G. Сериализация контейнеров</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам нужно написать функции для бинарной сериализации и десериализации (то есть, записи/чтения в поток) примитивных типов,
+            строк, а также контейнеров std::vector и std::map, шаблонные параметры которых - типы такого же вида. Например, ваша функция
+            должна уметь сериализовать контейнер std::vector&lt;std::map&lt;int, std::string<span style="">&gt;</span><span style="">&gt;</span>. 
+         </p></span><p>Заголовки функций, которые вам надо написать, представлены здесь: <a href="https://clck.ru/CWHJd">https://clck.ru/CWHJd</a>. 
+      </p>
+<p>Формат сериализации контейнеров должен быть таким: сначала записывается число типа size_t - размер контейнера, а затем уже
+         сами элементы. Для std::map записывайте элементы как пары, состоящие из ключа и значения. Функции Deserialize должны восстанавливать
+         исходный объект по сериализованному представлению.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Пусть, например, требуется сериализовать </p></span><p>std::map&lt;uint32_t, std::string&gt; m = { {1, "hello"}, {2, "bye"} };</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На 64-битной платформе с порядком байт little-endian результат должен получиться таким: <a href="https://clck.ru/CWH6A">https://clck.ru/CWH6A</a> (тут показан вывод утилиты hd, применённый к полученному бинарному файлу). 
+         </p></span></div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Для простоты в этой задаче не нужно учитывать выравнивание (alignment) и можно считать, что порядок байт (endianness) при
+            сериализации и десериализации будет одинаковым. 
+         </p></span><p>Используйте для записи и чтения байтов функции write и read у потоков типа std::ostream и std::istream. Подробнее про них
+         можно прочитать здесь: 
+      </p>
+<p><a href="http://en.cppreference.com/w/cpp/io/basic_ostream/write">http://en.cppreference.com/w/cpp/io/basic_ostream/write</a>
+</p>
+<p><a href="http://en.cppreference.com/w/cpp/io/basic_istream/read">http://en.cppreference.com/w/cpp/io/basic_istream/read</a>
+</p>
+<p></p>
+</div>
+</div>

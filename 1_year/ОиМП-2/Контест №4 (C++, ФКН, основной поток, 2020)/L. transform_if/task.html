@@ -1,0 +1,38 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">L. transform_if</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам необходимо реализовать шаблонный алгоритм <span style=""><span style="font-weight:bold;">transform_if</span></span> с заголовком 
+         </p></span><p>template &lt;typename InIter, typename OutIter, typename Predicate, typename Action&gt;<br/> OutIter transform_if(InIter first, InIter last, OutIter out, Predicate condition, Action f) 
+      </p>
+<p>Этот алгоритм должен применить функцию <span style=""><span style="font-weight:bold;">f</span></span> к тем элементам из полуинтервала <span style=""><span style="font-weight:bold;">[first, last)</span></span>, для которых предикат <span style=""><span style="font-weight:bold;">condition</span></span> вернул <span style=""><span style="font-weight:bold;">true</span></span>, и положить результат применения во второй полуинтервал (начинающийся с <span style=""><span style="font-weight:bold;">out</span></span>) в том же порядке. 
+      </p>
+<p>Результатом работы функции должен быть итератор, указывающий за последний сохраненный элемент (или равный <span style=""><span style="font-weight:bold;">out</span></span>, если ни один элемент скопирован не был).
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В вашем решении должен быть только код этой шаблонной функции и не должно быть функции main. При проверке наша программа test.cpp
+            будет использовать ваш алгоритм <span style=""><span style="font-weight:bold;">transform_if</span></span>. 
+         </p></span></div>
+</div>

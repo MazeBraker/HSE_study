@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+        package="c.ints"
+        id="XXX"
+        type="standard">
+  <statement language="ru_RU">
+    <description>
+
+<p>Напишите функцию</p>
+
+<pre>
+void *switch_stack(void *newstack, void *(*func)(void *), void *data);
+</pre>  
+
+<p>Функция должна запустить функцию <tt>func</tt>, передав ей параметр
+<tt>data</tt>, на новом стеке, верхушка которого
+(то есть адрес, непосредственно следующий за максимальным
+адресом, отведенным под стек) передается в параметре <tt>newstack</tt>.</p>
+
+<p>Функция <tt>switch_stack</tt>
+должна вернуть значение, которое было возвращено
+функцией <tt>func</tt>.</p>
+
+<p>Запуск на новом стеке означает, что у функции <tt>func</tt>
+регистр указателя стека <tt>esp</tt> должен содержать
+адрес в области памяти <tt>newstack</tt>. Но после завершения
+функции <tt>func</tt> стек должен переключиться обратно.</p>
+
+<p>Внимание, статус AC (Accepted for testing) означает,
+что программа успешно скомпилировалась. Запуск на тестах
+не производился.</p>
+
+</description>
+  </statement>
+<review_comments>
+</review_comments>
+</problem>

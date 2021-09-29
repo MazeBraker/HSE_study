@@ -1,0 +1,45 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Матрица - 4</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Внесите следующие изменения в предыдущую программу: </p></span><p>
+<ol>
+<li>Добавьте перегруженную версию оператора operator *= (const Matrix&amp; other), умножающую текущую матрицу на other. Заметьте,
+               что оператор должен вернуть ссылку на текущую модифицированную матрицу. 
+            </li>
+<li>Добавьте реализацию константного оператора operator * (const Matrix&amp; other), возвращающую произведение матриц. </li>
+</ol>
+</p>
+<p>Можете считать, что размеры матрицы не превосходят <span class="tex-math-text">100</span>, а значения — целые числа, не превосходящие <span class="tex-math-text">100</span> по модулю. 
+      </p>
+<p>Проверьте согласованность размеров перемножаемых матриц с помощью стандартной конструкции assert (<a href="https://en.cppreference.com/w/cpp/error/assert">https://en.cppreference.com/w/cpp/error/assert</a>).
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Для желающих: </p></span><p>При реализации метода произведения двух матриц стандартным алгоритмом (по определению) возникает три вложенных цикла. Понятно,
+         что от перестановки этих циклов местами ничего не изменится. Протестируйте, которая из перестановок циклов показывает наилучшие
+         результаты по времени и подумайте, почему это расположение циклов лучше остальных (если подумаете и не найдёте ответ — спросите семинариста или ассистента).
+      </p>
+</div>
+</div>

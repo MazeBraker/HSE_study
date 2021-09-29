@@ -1,0 +1,145 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">J. Стартап</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Выпускники факультета, следуя современным трендам, начали работу над своим стартапом. Они решили заняться перевозкой грузов.
+            Но на стипендию, полученную за время учёбы, они смогли приобрести лишь один грузовик. 
+         </p></span><p>В Вышляндии достаточно много городов, соединённых дорогами. По каждой дороге можно двигаться в обе стороны. </p>
+<p>Бизнес выпускников планирует быть весьма востребованным. К их досаде, из-за большого количества перевозимых грузов в Вышляндии
+         для каждой дороги ввели ограничение: по ней теперь можно провозить не больше определенного количества груза, зависящего от
+         качества этой дороги. 
+      </p>
+<p>Помогите им определить, какое максимальное количество груза они смогут доставить на одном грузовике между некоторыми парами
+         городов.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержатся два числа <span class="tex-math-text">N</span> и <span class="tex-math-text">M</span> (<span class="tex-math-text">2 
+               <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> N 
+               <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> 100 000, 0 
+               <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> M 
+               <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> 100 000</span>) — количество городов и дорог соответственно. 
+         </p></span><p>В следующих <span class="tex-math-text">M</span> строках содержатся описания рёбер. Каждое описание состоит из номеров двух различных городов, соединяемых дорогой, и целого
+         числа <span class="tex-math-text">c<sub>i</sub></span> (<span class="tex-math-text">0 
+            <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> c<sub>i</sub>
+<svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> 10<sup>9</sup></span>) — максимальное количество разрешённого для провоза по дороге груза. 
+      </p>
+<p>В следующей строке содержится число <span class="tex-math-text">K</span> (<span class="tex-math-text">0 
+            <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> K 
+            <svg height="14px" width="14px">
+<foreignobject>≤</foreignobject>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="3px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="7px" y2="10px"></line>
+<line stroke="black" x1="2px" x2="12px" y1="10px" y2="13px"></line>
+</svg> 100 000</span>) — количество запросов. 
+      </p>
+<p>В следующих <span class="tex-math-text">K</span> строках содержатся описания запросов. Каждое описание состоит из номеров двух различных городов, между которыми нужно найти
+         максимальное количество груза. 
+      </p>
+<p></p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для каждого запроса в отдельной строке выведите одно число — максимальное количество груза, которого можно провезти. </p></span><p></p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 3
+1 2 1
+2 3 2
+3 1 3
+1
+1 2
+</pre></td>
+<td><pre>2
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 1
+1 2 10
+2
+2 1
+2 3
+</pre></td>
+<td><pre>10
+0
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,58 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Счётчики</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Максу поручили автоматизировать учёт товаров на складе. </p></span><p>Каждый вид товаров имеет уникальный идентификатор — число типа <span class="tex-monospace">int</span>. Программа Макса должна позволять совершать следующие операции: 
+         <ul>
+<li><span class="tex-monospace">void increaseNumberOf(id)</span> — увеличить на 1 количество товаров вида <span class="tex-monospace">id</span>; 
+            </li>
+<li><span class="tex-monospace">void decreaseNumberOf(id)</span> — уменьшить на 1 количество товаров вида <span class="tex-monospace">id</span>. Если на складе не было товаров вида <span class="tex-monospace">id</span>, эта операция ничего не должна делать; 
+            </li>
+<li><span class="tex-monospace">size_t getNumberOf(id)</span> — узнать количество товаров вида <span class="tex-monospace">id</span>. 
+            </li>
+</ul>
+</p>
+<p>Для решения задачи Макс создал класс <span class="tex-monospace">Counter</span>: <a href="https://clck.ru/MMGmn">https://clck.ru/MMGmn</a>. 
+      </p>
+<p>Однако пока что программа Макса не работает так, как нужно: 
+         <ul>
+<li>после нескольких операций добавления и удаления может возвращаться ошибочное количество товаров; </li>
+<li>eсли Макс добавляет много одинаковых товаров, их подсчёт становится довольно долгим. </li>
+</ul>
+</p>
+<p>Помогите Максу исправить класс <span class="tex-monospace">Counter</span> таким образом, чтобы выполнялись следующие условия: 
+         <ul>
+<li>количество товаров всегда должно вычисляться верно; </li>
+<li>время работы <span class="tex-monospace">getNumberOf(id)</span> не должно зависеть от фактического количества товаров вида <span class="tex-monospace">id</span>; 
+            </li>
+<li>вызов <span class="tex-monospace">getNumberOf(id)</span> не должен влиять на время работы последующих вызовов любого из методов (подумайте, что означает это требование). 
+            </li>
+</ul>
+</p>
+<p>Отправьте исправленный код класса <span class="tex-monospace">Counter</span>. Сигнатуры его методов должны остаться без изменений. Вы можете выбрать другой контейнер для <span class="tex-monospace">data</span>, если сочтёте это нужным.
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Сдайте в систему исправленный код класса Counter.</p></span></div>
+</div>

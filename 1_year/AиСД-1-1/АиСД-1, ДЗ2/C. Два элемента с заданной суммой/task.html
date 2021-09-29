@@ -1,0 +1,75 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Два элемента с заданной суммой</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>3 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан целочисленный массив <span class="tex-math-text">A</span>, отсортированный в порядке неубывания, и целое число <span class="tex-math-text">S</span>. 
+         </p></span><p>Определите, содержит ли этот массив два различных элемента, сумма которых равна <span class="tex-math-text">S</span>.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целые числа <span class="tex-math-text">N</span> и <span class="tex-math-text">S</span> (<span class="tex-math-text">1 ≤ N ≤ 10<sup>6</sup></span>, <span class="tex-math-text">1 ≤ S ≤ 2⋅ 10<sup>9</sup></span>) — соответственно размер массива и искомую сумму двух элементов. 
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> (<span class="tex-math-text">-10<sup>9</sup> ≤ A<sub>i</sub> ≤ 10<sup>9</sup></span>, <span class="tex-math-text">A<sub>i</sub> ≤ A<sub>i + 1</sub></span>) — элементы массива.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Если массив содержит два различных элемента, сумма которых равна <span class="tex-math-text">S</span>, выведите <span class="tex-monospace">YES</span>. В противном случае выведите <span class="tex-monospace">NO</span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>8 5
+-2 0 1 1 3 7 10 12
+</pre></td>
+<td><pre>YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 8
+1 2 4 5
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

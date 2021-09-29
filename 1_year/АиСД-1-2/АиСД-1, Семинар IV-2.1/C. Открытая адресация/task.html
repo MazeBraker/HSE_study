@@ -1,0 +1,67 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Открытая адресация</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Реализуйте хеш-таблицу размера <span class="tex-math-text">S</span> с открытой адресацией и последовательными пробами. 
+         </p></span><p>Необходимо поддержать две операции: вставку нового элемента и вывод всей таблицы. Гарантируется, что все добавляемые элементы
+         различны. 
+      </p>
+<p>В качестве хеш-функции следует использовать функцию <span class="tex-math-text">f(x) = (4447 * x + 3889) mod 112909 mod S</span>.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла содержит два числа — размер таблицы <span class="tex-math-text">S</span> и число запросов вставки <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ S ≤ 10<sup>3</sup></span>). 
+         </p></span><p>В последующих <span class="tex-math-text">N</span> строках указано по одному числу <span class="tex-math-text">x<sub>i</sub></span> (<span class="tex-math-text">0 ≤ x<sub>i</sub> ≤ 10<sup>9</sup></span>).
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На каждый запрос вставки элемента следует вывести полное содержимое хеш-таблицы, разделяя элементы пробелами, а отстутствующие
+            элементы заменить на -1.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 4
+4
+3
+9
+1
+</pre></td>
+<td><pre>-1 -1 4 -1 -1 
+3 -1 4 -1 -1 
+3 -1 4 9 -1 
+3 1 4 9 -1 
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,68 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Static concurrent RMQ</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам даны набор целых чисел <span class="tex-monospace">vector&lt;int&gt; numbers</span> и набор запросов к нему <span class="tex-monospace">vector&lt;Request&gt; requests</span>, где <span class="tex-monospace">Request</span> — структура следующего вида:
+         </p></span><p><span class="tex-monospace">struct Request { int left; int right; };</span></p>
+<p>Необходимо найти ответ на каждый запрос — минимальное из чисел <span class="tex-monospace">numbers[left]</span>, ... , <span class="tex-monospace">numbers[right - 1]</span>.
+      </p>
+<p>Отправьте на проверку заголовочный файл, содержащий определение структуры <span class="tex-monospace">Request</span>, любые вспомогательные функции и классы, а также функцию <span class="tex-monospace">ProcessRequests</span> следующего вида:
+      </p>
+<p><span class="tex-monospace">vector&lt;int&gt; ProcessRequests(const vector&lt;int&gt;&amp; numbers, const vector&lt;Request&gt;&amp; requests);</span></p>
+<p>Отправленный вами код <span style="font-weight:bold;">не должен содержать функцию <span class="tex-monospace">main</span></span>.
+      </p>
+<p>Пример использования: <a href="https://pastebin.com/QBZQi57d">https://pastebin.com/QBZQi57d</a></p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Для каждого запроса <span class="tex-monospace">request</span> гарантируется, что: 
+            <ul>
+<li>границы запроса корректны, то есть <span class="tex-monospace">0 &lt;= request.left &lt; numbers.size()</span> и <span class="tex-monospace">0 &lt; request.right &lt;= numbers.size()</span>; 
+               </li>
+<li>полуинтервал запроса непуст, то есть <span class="tex-monospace">request.left &lt; request.right</span>; 
+               </li>
+</ul>
+</p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Верните <span class="tex-monospace">vector&lt;int&gt;</span> — вектор ответов на запросы. i-й элемент этого вектора должен являться ответом на i-й элемент вектора <span class="tex-monospace">requests</span>.
+         </p></span></div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Ваше решение проверяется вручную. При отправке его в контест вы <span style="font-weight:bold;">должны получить вердикт CE:</span> из-за отсутствия функции <span class="tex-monospace">main</span> или недоступности необходимых заголовочных файлов.
+         </p></span><p>Вам доступны заголовочные файлы <span class="tex-monospace">&lt;execution&gt;</span>, <span class="tex-monospace">&lt;future&gt;</span>, <span class="tex-monospace">&lt;mutex&gt;</span> и другая функциональность в соответствии со стандартом C++17.
+      </p>
+<p>Ваше решение будет засчитано, если: 
+         <ul>
+<li>проходит юнит-тесты, проверяюще корректность работы функции <span class="tex-monospace">ProcessRequests</span>; 
+            </li>
+<li>на достаточно больших векторах выигрывает у стандартного однопоточного решения с деревом отрезков в среднем минимум на 30
+               %. 
+            </li>
+</ul>
+</p>
+<p>Когда ваше решение будет проверено, его вердикт будет изменён. Если решение не скомпилировалось у проверяющего, вердикт будет
+         изменён на «Manual Inspection». С вопросами обращайтесь к своему ассистенту или отправляйте вопросы в контесте.
+      </p>
+</div>
+</div>

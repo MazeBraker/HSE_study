@@ -1,0 +1,111 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Сумма на отрезке, изменение элемента</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан целочисленный массив <span class="tex-math-text">A</span>, состоящий из <span class="tex-math-text">N</span> элементов. 
+         </p></span><p>Обработайте <span class="tex-math-text">Q</span> запросов следующего вида: 
+         <ul>
+<li><span class="tex-math-text">1</span> <span class="tex-math-text">L</span> <span class="tex-math-text">R</span> — определить сумму элементов с индексами от <span class="tex-math-text">L</span> до <span class="tex-math-text">R</span> включительно; 
+            </li>
+<li><span class="tex-math-text">2</span> <span class="tex-math-text">I</span> <span class="tex-math-text">X</span> — присвоить элементу с индексом <span class="tex-math-text">I</span> значение <span class="tex-math-text">X</span>. 
+            </li>
+</ul>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 2 ⋅ 10<sup>5</sup></span>) — размер массива. 
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> (<span class="tex-math-text">-10<sup>9</sup> ≤ A<sub>i</sub> ≤ 10<sup>9</sup></span>) — элементы массива. 
+      </p>
+<p>Третья строка содержит целое число <span class="tex-math-text">Q</span> (<span class="tex-math-text">1 ≤ Q ≤ 2 ⋅ 10<sup>5</sup></span>) — количество запросов. 
+      </p>
+<p>Следующие <span class="tex-math-text">Q</span> строк описывают запросы. Каждая из них содержит целое число <span class="tex-math-text">T<sub>j</sub></span> (<span class="tex-math-text">T<sub>j</sub> ∈ {1, 2}</span>) — тип запроса. 
+         <ul>
+<li>Если <span class="tex-math-text">T<sub>j</sub> = 1</span>, то далее следуют целые числа <span class="tex-math-text">L<sub>j</sub></span> и <span class="tex-math-text">R<sub>j</sub></span> (<span class="tex-math-text">0 ≤ L<sub>j</sub> ≤ R<sub>j</sub> &lt; N</span>) — границы отрезка; 
+            </li>
+<li>Если <span class="tex-math-text">T<sub>j</sub> = 2</span>, то далее следуют целые числа <span class="tex-math-text">I<sub>j</sub></span> и <span class="tex-math-text">X<sub>j</sub></span> (<span class="tex-math-text">0 ≤ I<sub>j</sub> &lt; N</span>, <span class="tex-math-text">-10<sup>9</sup> ≤ X<sub>j</sub> ≤ 10<sup>9</sup></span>) — соответственно индекс элемента и его новое значение. 
+            </li>
+</ul>
+</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для каждого запроса типа <span class="tex-math-text">1</span> выведите в отдельной строке одно целое число — сумму элементов, принадлежащих отрезку.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+1 2 3 4 5
+3
+1 0 3
+2 2 6
+1 2 4
+</pre></td>
+<td><pre>10
+15
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10
+4 -2 5 7 -6 1 9 -3 -4 8
+10
+1 0 2
+2 4 -4
+1 0 9
+1 7 9
+2 6 3
+2 3 -5
+1 4 6
+2 4 -9
+2 8 3
+1 6 8
+</pre></td>
+<td><pre>7
+21
+1
+0
+3
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,81 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Ассоциативная операция</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Пусть на множестве <span class="tex-math-text">A</span> введена бинарная операция *, то есть, каждой упорядоченной паре элементов <span class="tex-math-text">x, y ∈ A</span> сопоставлен элемент <span class="tex-math-text">x * y ∈ A</span>. 
+         </p></span><p>Такая операция называется <span style="font-style:italic;">ассоциативной</span>, если <span class="tex-math-text">(x * y) * z = x * (y * z)</span> для любых элементов <span class="tex-math-text">x, y, z ∈ A</span>. 
+      </p>
+<p>Примеры ассоциативных операций - сложение или умножение обычных чисел (в школе это называли сочетательным законом), или композиция
+         функций. Примеры неассоцитивных операций - вычитание, деление, возведение в степень. Математики называют множество с ассоциативной
+         операцией <span style="font-style:italic;">полугруппой</span>. 
+      </p>
+<p>Вам нужно проверить, является ли заданная операция на <span class="tex-math-text">n</span>-элементном множестве <span class="tex-math-text">A</span> ассоциативной. Будем считать, что элементы множества <span class="tex-math-text">A</span> пронумерованы числами от 0 до <span class="tex-math-text">n-1</span>: <span class="tex-math-text">A = {a<sub>0</sub>, …,   a<sub>n-1</sub>}.</span></p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке указано натуральное число <span class="tex-math-text">n</span>, не превосходящее 100. 
+         </p></span><p>Далее следует <span class="tex-math-text">n<sup>2</sup></span> чисел (каждое в пределах от 0 до <span class="tex-math-text">n-1</span>), которые построчно задают матрицу операции *. Это значит, что на пересечении <span class="tex-math-text">i</span>-й строки и <span class="tex-math-text">j</span>-го столбца этой матрицы стоит номер элемента <span class="tex-math-text">a<sub>i</sub> * a<sub>j</sub></span> (нумерация ведётся с нуля).
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите YES, если операция ассоциативна, и NO в противном случае.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2
+0 1
+1 0
+</pre></td>
+<td><pre>YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2
+0 0
+1 0
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

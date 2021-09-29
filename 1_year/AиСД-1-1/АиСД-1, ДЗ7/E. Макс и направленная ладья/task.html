@@ -1,0 +1,103 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Макс и направленная ладья</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Ладья — это шахматная фигура, которая может перемещаться на любое количество клеток по горизонтали и вертикали. </p></span><p>Владимир показал Максу необычную шахматную доску. Она имела размер <span class="tex-math-text">H × W</span> (<span class="tex-math-text">H</span> горизонталей и <span class="tex-math-text">W</span> вертикалей; горизонтали нумеруются сверху вниз от 1 до <span class="tex-math-text">H</span>, вертикали нумеруются слева направо от 1 до <span class="tex-math-text">W</span>), а в каждой клетке был написан символ <span class="tex-monospace">U</span>, <span class="tex-monospace">L</span>, <span class="tex-monospace">D</span> или <span class="tex-monospace">R</span>. 
+      </p>
+<p>Владимир объяснил Максу, что это — придуманная им новая головоломка. Владимир поставил ладью в клетку на пересечении горизонтали <span class="tex-math-text">R<sub>1</sub></span> и вертикали <span class="tex-math-text">C<sub>1</sub></span>. Теперь Макс должен довести эту ладью до клетки на пересечении горизонтали <span class="tex-math-text">R<sub>2</sub></span> и вертикали <span class="tex-math-text">C<sub>2</sub></span>. Но есть ограничение: ладья всё ещё может ходить на любое количество клеток, но только в том направлении, которое указано
+         на клетке, в которой она стояла в начале хода: 
+         <ul>
+<li><span class="tex-monospace">U</span> — ладья может двигаться только вверх; 
+            </li>
+<li><span class="tex-monospace">L</span> — ладья может двигаться только влево; 
+            </li>
+<li><span class="tex-monospace">D</span> — ладья может двигаться только вниз; 
+            </li>
+<li><span class="tex-monospace">R</span> — ладья может двигаться только вправо. 
+            </li>
+</ul>
+</p>
+<p>Помогите Максу добраться до нужной клетки за наименьшее число ходов.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целые числа <span class="tex-math-text">H</span> и <span class="tex-math-text">W</span> (<span class="tex-math-text">1 ≤ H, W ≤ 100</span>) — соответственно количество горизонталей и количество вертикалей доски. 
+         </p></span><p>Следующие <span class="tex-math-text">H</span> строк описывают доску. Каждая из них содержит <span class="tex-math-text">W</span> символов <span class="tex-math-text">A<sub>ij</sub></span> (<span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/QV97aWp9IFxpbiBce1x0ZXh0dHR7VX0sXHRleHR0dHtMfSxcdGV4dHR0e0R9LFx0ZXh0dHR7Un1cfQ==.png"/></span>) — направления, указанные в клетках доски. 
+      </p>
+<p>Следующая строка содержит целые числа <span class="tex-math-text">R<sub>1</sub></span> и <span class="tex-math-text">C<sub>1</sub></span> (<span class="tex-math-text">1 ≤ R<sub>1</sub> ≤ H</span>, <span class="tex-math-text">1 ≤ C<sub>1</sub> ≤ W</span>) — соответственно номера горизонтали и вертикали, на пересечении которых ладья находится изначально. 
+      </p>
+<p>Следующая строка содержит целые числа <span class="tex-math-text">R<sub>2</sub></span> и <span class="tex-math-text">C<sub>2</sub></span> (<span class="tex-math-text">1 ≤ R<sub>2</sub> ≤ H</span>, <span class="tex-math-text">1 ≤ C<sub>2</sub> ≤ W</span>) — соответственно номера горизонтали и вертикали, на пересечении которых ладья должна оказаться.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — минимальное количество ходов ладьи, после которых она окажется в нужной клетке. </p></span><p>Если ладья не сможет добраться до нужной клетки, выведите -1.</p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 3
+RDR
+RLU
+1 1
+2 3
+</pre></td>
+<td><pre>4
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 5
+RDULD
+DLDUR
+RUDDL
+LRUUD
+3 4
+4 1
+</pre></td>
+<td><pre>6
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Сравните с задачей 3 второго семинара недели 7.</p></span></div>
+</div>

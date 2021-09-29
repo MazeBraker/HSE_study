@@ -1,0 +1,124 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Слияние компаний</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>0.5 секунд</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>32Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Джон развозит пиццу в компании Кремниевой долины. Бизнес в Кремниевой долине идёт так быстро, что к тому времени, как Джон
+            выставляет счёт за пиццу компании <span class="tex-math-text">А</span>, может оказаться, что компанию <span class="tex-math-text">А</span> поглотила компания <span class="tex-math-text">B</span>, и счёт нужно выставлять уже ей. Джону это порядком надоело, и он просит вас написать программу, которая всегда сможет сказать,
+            какой компании выставлять счёт.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На вход вашей программе через пробел подаются два числа <span class="tex-math-text">n</span> и <span class="tex-math-text">m</span> (<span class="tex-math-text">1 ≤ n, m ≤ 10<sup>5</sup></span>), где <span class="tex-math-text">n</span> – количество компаний, <span class="tex-math-text">m</span> – количество запросов к вашей программе. Далее следуют <span class="tex-math-text">m</span> строк, каждая из которых представляет собой запрос одного из двух видов: 
+            <ul>
+<li>Символ "m", после которого через пробел идут два числа <span class="tex-math-text">a<sub>i</sub></span> и <span class="tex-math-text">b<sub>i</sub></span> (где <span class="tex-math-text">1 ≤ a<sub>i</sub>, b<sub>i</sub> ≤ n</span>) – этот запрос означает, компания с номером <span class="tex-math-text">a<sub>i</sub></span> поглотила компанию с номером <span class="tex-math-text">b<sub>i</sub></span> (нумерация компаний начинается с 1). Гарантируется, что до этого компании <span class="tex-math-text">a<sub>i</sub></span> и <span class="tex-math-text">b<sub>i</sub></span> никто не поглощал. В ответ на этот запрос ничего выводить не требуется; 
+               </li>
+<li>Символ "b", после которого через пробел идёт число <span class="tex-math-text">c<sub>k</sub></span>. В ответ на этот запрос выведите номер компании, частью которой является компания с номером <span class="tex-math-text">c<sub>k</sub></span> на текущий момент времени. Если компанию с номером <span class="tex-math-text">c<sub>k</sub></span> никто не поглотил, выведите <span class="tex-math-text">c<sub>k</sub></span> как есть. 
+               </li>
+</ul>
+</p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На каждый запрос типа "b" выведите с новой строки целое число, являющееся ответом.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 5
+b 1
+m 3 1
+b 1
+m 2 3
+b 1</pre></td>
+<td><pre>1
+3
+2</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 8
+m 5 4
+m 2 5
+m 2 1
+m 3 2
+b 1
+b 5
+b 2
+b 4
+</pre></td>
+<td><pre>3
+3
+3
+3</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7 12
+m 4 7
+b 6
+b 6
+m 2 4
+m 6 2
+b 5
+m 3 6
+b 3
+b 3
+m 3 5
+m 3 1
+b 7
+</pre></td>
+<td><pre>6
+6
+5
+3
+3
+3</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,64 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">P. Сортировка списка структур</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Определите структуру "Студент" с полями имя, фамилия, дата, месяц и год рождения. Создайте вектор из таких структур, заполните
+            его из входных данных, отсортируйте по возрастанию даты рождения либо по фамилии и имени в лексикографическом порядке и выведите
+            отсортированный список. 
+         </p></span><p>При сортировке по дате рождения при равенстве года, месяца и числа рождения, сравнивайте лексикографически фамилии и имена.
+         
+      </p>
+<p>При сортировке по фамилии и имени, сравнивайте сначала фамилии, затем имена при равенстве - даты рождения.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит одно целое число <span class="tex-math-text">N</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>4</sup></span> - число студентов. 
+         </p></span><p>Далее идут <span class="tex-math-text">N</span> строк, каждая из которых содержит две строки длиной от <span class="tex-math-text">1</span> до <span class="tex-math-text">15</span> символов - имя и фамилию очередного студента, и три целых числа от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - день, месяц и год рождения. 
+      </p>
+<p>Следующая строка содержит способ сортировки - "name" или "date".</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите список студентов в формате "имя фамилия день.месяц.год".</p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+Ivan Ivanov 1 1 1901
+Petr Petrov 2 2 1902
+Alexander Sidorov 3 3 1903
+date</pre></td>
+<td><pre>Ivan Ivanov 1.1.1901
+Petr Petrov 2.2.1902
+Alexander Sidorov 3.3.1903</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

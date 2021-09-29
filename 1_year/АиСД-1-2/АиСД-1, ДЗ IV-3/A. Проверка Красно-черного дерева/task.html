@@ -1,0 +1,154 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Проверка Красно-черного дерева</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>В данной задаче вам требуется проверить заданное бинарное дерево на красно-черность. </p></span><p>В дереве обычно присутствует фиктивная листовая вершина (NIL), которая по определению черная. Мы здесь будем придерживаться
+         этого, но во входе она явна задана не будет (читайте описание входного формата). 
+      </p>
+<p>Напомним свойства красно-черных деревьев:<br/><ol>
+<li>Прежде всего, это дерево поиска, т.е. для любой вершины дерева <span class="tex-math-text">node</span>, любой вершины левого поддерева этой вершины <span class="tex-math-text">left</span> и любой вершины правого поддерева <span class="tex-math-text">right</span> выполняется строгое неравенство <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/bGVmdC5rZXkgXGx0IG5vZGUua2V5IFxsdCByaWdodC5rZXk=.png"/></span>. 
+            </li>
+<li>Каждая вершина имеет красный или черный цвет. </li>
+<li>Корень дерева и листья (NIL) имеют черный цвет. </li>
+<li>Если вершина — красная, то ее родитель — черный. </li>
+<li>Все простые пути из любой вершины <span class="tex-math-text">x</span> до листьев содержат одинаковое количество черных вершин. 
+            </li>
+</ol>Заметим, что черная вершина может иметь черного родителя.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержится целое число <span class="tex-math-text">N (0 ≤ N ≤ 10<sup>5</sup>)</span> — размер дерева. Если <span class="tex-math-text">N 
+               =
+                0</span>, то на этом ввод закончен. Иначе на следующей строке содержится натуральное число <span class="tex-math-text">root (1 ≤ root ≤ N)</span> — номер корневой вершины. В следующих <span class="tex-math-text">N</span> строках содержатся описания вершин. Каждая строка описания имеет следующий формат:<br/><span class="tex-math-text">Number Key Left Right Color</span>, где <span class="tex-math-text">Number</span> — номер соответствующей вершины, <span class="tex-math-text">Key</span> — ключ вершины, <span class="tex-math-text">Left, Right</span> — номера левого и правого сына, соответственно (null, если соответствующий сын — это фиктивная вершина), <span class="tex-math-text">Color</span> — цвет вершины (R или B). Гарантируется, что заданный граф — бинарное дерево.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>YES или NO в зависимости от корректности дерева.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 1
+1 2 2 4 B
+2 0 null 3 R
+3 1 null null B
+4 3 null 5 R
+5 4 null null B
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 1
+1 3 2 4 B
+2 1 null 3 R
+3 2 null null B
+4 4 null 5 B
+5 5 null null B
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 1
+1 2 2 3 B
+2 3 null null R
+3 1 null null R
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 4</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7 7
+7 4 6 5 B
+6 2 4 3 R
+5 6 2 1 R
+4 1 null null B
+3 3 null null B
+2 5 null null B
+1 7 null null B
+</pre></td>
+<td><pre>YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 5</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>1 1
+1 1 null null R
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

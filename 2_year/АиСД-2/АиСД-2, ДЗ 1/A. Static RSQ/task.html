@@ -1,0 +1,114 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Static RSQ</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан целочисленный массив <span class="tex-math-text">A</span>, состоящий из <span class="tex-math-text">N</span> элементов.
+         </p></span><p>Обработайте <span class="tex-math-text">Q</span> запросов следующего вида: 
+         <ul>
+<li><span class="tex-math-text">L</span> <span class="tex-math-text">R</span> — определить сумму элементов с индексами от <span class="tex-math-text">L</span> до <span class="tex-math-text">R</span> включительно. 
+            </li>
+</ul>
+</p>
+<p>Так как количество запросов в этой задаче велико, их аргументы не будут описаны во входных данных. Вместо этого вам нужно
+         получить их при помощи генератора случайных чисел.
+      </p>
+<p>Вам нужно сгенерировать последовательность чисел <span class="tex-math-text">X<sub>0</sub></span>, <span class="tex-math-text">X<sub>1</sub></span>, ..., <span class="tex-math-text">X<sub>2Q - 1</sub></span>. Число <span class="tex-math-text">X<sub>0</sub></span> указано во входных данных, а остальные числа вычисляются по формуле <span class="tex-math-text">X<sub>i</sub> = (11173 ⋅ X<sub>i - 1</sub> + 1) mod 1000000007</span>.
+      </p>
+<p>Далее из этих чисел образуются аргументы запросов: 
+         <ul>
+<li><span class="tex-math-text">L<sub>0</sub> = min(X<sub>0</sub> mod N, X<sub>1</sub> mod N)</span>, <span class="tex-math-text">R<sub>0</sub> = max(X<sub>0</sub> mod N, X<sub>1</sub> mod N)</span>; 
+            </li>
+<li><span class="tex-math-text">L<sub>1</sub> = min(X<sub>2</sub> mod N, X<sub>3</sub> mod N)</span>, <span class="tex-math-text">R<sub>1</sub> = max(X<sub>2</sub> mod N, X<sub>3</sub> mod N)</span>; 
+            </li>
+<li>... </li>
+<li><span class="tex-math-text">L<sub>Q - 1</sub> = min(X<sub>2Q - 2</sub> mod N, X<sub>2Q - 1</sub> mod N)</span>, <span class="tex-math-text">R<sub>Q - 1</sub> = max(X<sub>2Q - 2</sub> mod N, X<sub>2Q - 1</sub> mod N)</span>. 
+            </li>
+</ul>
+</p>
+<p>Для большей ясности прочитайте примечание к примеру.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 10<sup>5</sup></span>) — размер массива. 
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> (<span class="tex-math-text">0 ≤ A<sub>i</sub> ≤ 10<sup>9</sup></span>) — элементы массива. 
+      </p>
+<p>Третья строка содержит целое число <span class="tex-math-text">Q</span> (<span class="tex-math-text">1 ≤ Q ≤ 10<sup>7</sup></span>) — количество запросов. 
+      </p>
+<p>Четвёртая строка содержит целое число <span class="tex-math-text">X<sub>0</sub></span> (<span class="tex-math-text">0 ≤ X<sub>0</sub> ≤ 10<sup>9</sup></span>) — начальное значение генератора случайных чисел.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — остаток от деления суммы ответов на все запросы на <span class="tex-math-text">1000000007</span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+1 2 3 4 5
+3
+123
+</pre></td>
+<td><pre>27</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7
+34 10 49 32 28 15 70
+5
+0
+</pre></td>
+<td><pre>492</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Последовательность <span class="tex-math-text">X</span> в первом примере равна <span class="tex-math-text">{123, 1374280, 354830336, 519316381, 321884300, 413258729}</span> Запросы: 
+            <ul>
+<li><span class="tex-math-text">L<sub>0</sub> = 0</span>, <span class="tex-math-text">R<sub>0</sub> = 3</span> (ответ <span class="tex-math-text">10</span>); 
+               </li>
+<li><span class="tex-math-text">L<sub>1</sub> = 1</span>, <span class="tex-math-text">R<sub>1</sub> = 1</span> (ответ <span class="tex-math-text">2</span>); 
+               </li>
+<li><span class="tex-math-text">L<sub>2</sub> = 0</span>, <span class="tex-math-text">R<sub>2</sub> = 4</span> (ответ <span class="tex-math-text">15</span>). 
+               </li>
+</ul>Сумма ответов на все запросы равна <span class="tex-math-text">27</span>.
+         </p></span></div>
+</div>

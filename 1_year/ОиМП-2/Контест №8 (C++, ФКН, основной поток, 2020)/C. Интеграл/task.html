@@ -1,0 +1,64 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Интеграл</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вася изучил два метода приближенного интегрирования функций — метод прямоугольников и метод трапеций. Он даже написал программу, которая будет получать на вход метод интегрирования, концы
+            отрезка и число отрезков разбиения, и будет вычислять интеграл от функций <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XHNpbih4KQ==.png"/></span> и <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XGNvcyh4KQ==.png"/></span>: <a href="https://clck.ru/AqncS">https://clck.ru/AqncS</a>. 
+         </p></span><p>Напишите недостающие классы IntegrationMethod, RectangleRule и TrapezoidalRule с реализацией методов интегрирования, чтобы
+         Васина программа заработала. В них должна быть реализована функция Integrate, принимающая на вход функцию для интегрирования,
+         концы отрезка (double) и число частей для разбиения (int). 
+      </p>
+<p>Обратите внимание, что шаблонные функции не могут быть виртуальными, поэтому тип функции интегрирования не получится сделать
+         шаблонным параметром функции Integrate. Вместо этого нужно сделать шаблонным весь класс, и передавать тип функции еще при
+         создании класса. К счастью, последнюю часть Вася уже сделал за вас (см. строки 9, 13, 15, 17).
+      </p>
+</div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>rectangle 0 3.1415926 100
+</pre></td>
+<td><pre>5.3592e-08
+2.00008
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Вам нужно сдать только код классов. В вашей программе не должно быть функции main: мы будем тестировать ваш код с Васиной
+            функцией main. 
+         </p></span><p>Формулы интегрирования такие: </p>
+<p>
+<div class="tex-math-block"><img class="tex-math" src="/testsys/tex/render/XGludF9hXmIgZih4KSBkeCBcYXBwcm94IFxzdW1fe2k9MH1ee24tMX0gZlxsZWZ0KFxmcmFje3hfaSt4X3tpKzF9fXsyfVxyaWdodCkgKHhfe2krMX0teF9pKSBccXVhZCBcdGV4dHso0YTQvtGA0LzRg9C70LAg0L/RgNGP0LzQvtGD0LPQvtC70YzQvdC40LrQvtCyKX0s.png"/></div>
+<div class="tex-math-block"><img class="tex-math" src="/testsys/tex/render/XGludF9hXmIgZih4KSBkeCBcYXBwcm94IFxzdW1fe2k9MH1ee24tMX0gXGZyYWN7Zih4X2kpK2YoeF97aSsxfSl9ezJ9ICh4X3tpKzF9LXhfaSkgXHF1YWQgXHRleHR7KNGE0L7RgNC80YPQu9CwINGC0YDQsNC/0LXRhtC40LkpfSw=.png"/></div> где <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/eF9rID0gYSArIFxmcmFje2ItYX17bn1r.png"/></span>. 
+      </p>
+</div>
+</div>

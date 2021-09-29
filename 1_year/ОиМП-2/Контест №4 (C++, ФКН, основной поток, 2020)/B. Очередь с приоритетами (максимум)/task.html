@@ -1,0 +1,149 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">B. Очередь с приоритетами (максимум)</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Напишите программу, которая будет обрабатывать последовательность запросов таких видов: </p></span><p>CLEAR — сделать очередь с приоритетами пустой (если в очереди уже были какие-то элементы, удалить все). Действие происходит
+         только с данными в памяти, на экран ничего не выводится. 
+      </p>
+<p>ADD n — добавить в очередь с приоритетами число n. Действие происходит только с данными в памяти, на экран ничего не выводится.
+         
+      </p>
+<p>EXTRACT — вынуть из очереди с приоритетами максимальное значение. Следует и изменить данные в памяти, и вывести на экран или
+         найденное максимальное значение, или, если очередь была пустой, слово "CANNOT" (большими буквами).
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Во входных данных записано произвольную последовательность запросов CLEAR, ADD и EXTRACT — каждый в отдельной строке, согласно
+            вышеописанному формату.Суммарное количество всех запросов не превышает 200000.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для каждого запроса типа EXTRACT выведите на стандартный выход (экран) его результат (в отдельной строке).</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>ADD 192168812
+ADD 125
+ADD 321
+EXTRACT
+EXTRACT
+CLEAR
+ADD 7
+ADD 555
+EXTRACT
+EXTRACT
+EXTRACT
+</pre></td>
+<td><pre>192168812
+321
+555
+7
+CANNOT
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>CLEAR
+ADD 7
+ADD 555
+EXTRACT
+EXTRACT
+EXTRACT
+CLEAR
+EXTRACT
+ADD 321847
+EXTRACT
+EXTRACT
+ADD 127307
+ADD 949912
+ADD 840884
+ADD 654060
+EXTRACT
+EXTRACT
+</pre></td>
+<td><pre>555
+7
+CANNOT
+CANNOT
+321847
+CANNOT
+949912
+840884
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>ADD 281305
+ADD 876406
+ADD 960204
+ADD 562475
+EXTRACT
+EXTRACT
+ADD 1035495
+EXTRACT
+EXTRACT
+EXTRACT
+</pre></td>
+<td><pre>960204
+876406
+1035495
+562475
+281305
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Следует использовать стандартную реализацию очереди с приоритетами в STL; она называется priority_queue, для её использования
+            необходимо подключить заголовочный файл queue.
+         </p></span></div>
+</div>

@@ -1,0 +1,71 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">O. Список студентов</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Определите структуру "Студент" с полями имя, фамилия, дата, месяц и год рождения. Создайте вектор из таких структур, заполните
+            его из входных данных и затем по запросам выведите нужные поля.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит одно целое число <span class="tex-math-text">N</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>4</sup></span> - число студентов. 
+         </p></span><p>Далее идут <span class="tex-math-text">N</span> строк, каждая из которых содержит две строки длиной от <span class="tex-math-text">1</span> до <span class="tex-math-text">15</span> символов - имя и фамилия очередного студента, и три целых числа от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - день, месяц и год рождения. 
+      </p>
+<p>Следующая строка содержит одно целое число <span class="tex-math-text">M</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>4</sup></span> - число запросов. 
+      </p>
+<p>Следующие <span class="tex-math-text">M</span> строк содержат строку длиной от <span class="tex-math-text">1</span> до <span class="tex-math-text">15</span> символов - запрос, и целое число от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span> - номер студента (нумерация начинается с <span class="tex-math-text">1</span>).
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для запроса вида "name K", где K от <span class="tex-math-text">1</span> до <span class="tex-math-text">N</span>, выведите через пробел имя и фамилию <span class="tex-math-text">K</span>-го студента. 
+         </p></span><p>Для запроса вида "date K", где K от <span class="tex-math-text">1</span> до <span class="tex-math-text">N</span>, выведите через точку число, месяц и год рождения <span class="tex-math-text">K</span>-го студента. 
+      </p>
+<p>Для остальных запросов выведите "bad request".</p>
+</div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+Ivan Ivanov 1 1 1901
+Petr Petrox 2 2 1902
+Alexander Sidorov 3 3 1903
+3
+name 1
+date 3
+mark 5
+</pre></td>
+<td><pre>Ivan Ivanov
+3.3.1903
+bad request
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

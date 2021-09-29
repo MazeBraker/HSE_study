@@ -1,0 +1,81 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Независимое множество</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>3 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан неориентированный граф без петель, но, возможно, с кратными рёбрами.</p></span><p>Проверьте, существует ли в этом графе независимое множество заданного размера.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке содержатся целые числа <span class="tex-math-text">V</span> и <span class="tex-math-text">S</span> — количество вершин в графе и размер искомого независимого множества (<span class="tex-math-text">1 ≤ V ≤ 50</span>, <span class="tex-math-text">1 ≤ S ≤ 50</span>).
+         </p></span><p>Вторая строка содержит целое число <span class="tex-math-text">E</span> — количество рёбер в графе (<span class="tex-math-text">0 ≤ E ≤ 1000</span>).
+      </p>
+<p>В каждой из следующих <span class="tex-math-text">E</span> строк содержится пара вершин <span class="tex-math-text">b<sub>i</sub></span>, <span class="tex-math-text">e<sub>i</sub></span>, описывающая очередное ребро (<span class="tex-math-text">1 ≤ b<sub>i</sub> ≤ V</span>, <span class="tex-math-text">1 ≤ e<sub>i</sub> ≤ V</span>, <span class="tex-math-text">b<sub>i</sub> ≠ e<sub>i</sub></span>).
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите <span class="tex-monospace">YES</span>, если в заданном графе существует независимое множество размера <span class="tex-math-text">S</span>. В противном случае выведите <span class="tex-monospace">NO</span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 3
+3
+1 2
+3 4
+4 5
+</pre></td>
+<td><pre>YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 4
+3
+1 2
+3 4
+4 5
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

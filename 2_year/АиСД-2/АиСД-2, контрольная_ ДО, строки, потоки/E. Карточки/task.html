@@ -1,0 +1,109 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Карточки</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан набор из <span class="tex-math-text">N</span> карточек. На одной стороне <span class="tex-math-text">i</span>-й карточки написана буква <span class="tex-math-text">A<sub>i</sub></span>, на другой — буква <span class="tex-math-text">B<sub>i</sub></span>.
+         </p></span><p>Определите, можно ли из этих карточек сложить слово <span class="tex-math-text">S</span>. Каждую карточку можно использовать не более одного раза.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 100</span>) — количество карточек.
+         </p></span><p>Следующие <span class="tex-math-text">N</span> строк описывают карточки. Каждая из них содержит строчные латинские буквы <span class="tex-math-text">A<sub>i</sub></span> и <span class="tex-math-text">B<sub>i</sub></span> — символы, записанные на лицевой и оборотной стороне карточки.
+      </p>
+<p>Следующая строка содержит слово <span class="tex-math-text">S</span> (<span class="tex-math-text">1 ≤ |S| ≤ 100</span>), состоящее из строчных латинских букв, которое требуется сложить из карточек.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите <span class="tex-monospace">YES</span>, если из карточек возможно составить слово <span class="tex-math-text">S</span>. В противном случае выведите <span class="tex-monospace">NO</span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+a o
+b c
+c d
+e d
+c m
+code
+</pre></td>
+<td><pre>YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>8
+a g
+p p
+r r
+g o
+m p
+a z
+o f
+x p
+program
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>1
+a a
+aa
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

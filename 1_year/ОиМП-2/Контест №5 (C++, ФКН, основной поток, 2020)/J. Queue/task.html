@@ -1,0 +1,56 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">J. Queue</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам требуется реализовать класс <span style=""><span style="font-weight:bold;"><span style="">Queue</span></span></span>, аналогичный адаптеру std::queue, являющийся оберткой над некоторым стандартным контейнером и реализующий интерфейс очереди.
+            
+         </p></span><p>Класс должен быть шаблонным. Первый шаблонный параметр T — тип хранимых элементов. Второй шаблонный параметр — контейнер, используемый для хранения элементов (по умолчанию — std::deque&lt;T&gt;): </p>
+<p>template &lt;typename T, typename Container = std::deque&lt;T<span style="">&gt;</span><span style="">&gt;</span><br/> class Queue; 
+      </p>
+<p>Предусмотрите в классе следующее: </p>
+<p>1. Конструктор по умолчанию, создающий пустую очередь. </p>
+<p>2. Константную функцию <span style=""><span style="font-weight:bold;"><span style="">front</span></span></span>, возвращающую элемент, стоящий в начале очереди. 
+      </p>
+<p>3. Неконстантную функцию <span style=""><span style="font-weight:bold;"><span style="">front</span></span></span>, возвращающую по ссылке элемент, стоящий в начале очереди (и тем самым позволяющую его изменять). 
+      </p>
+<p>4. Функцию <span style=""><span style="font-weight:bold;"><span style="">pop</span></span></span>, убирающую элемент из начала очереди (и ничего не возвращающую). 
+      </p>
+<p>5. Функцию <span style=""><span style="font-weight:bold;"><span style="">push</span></span></span>, кладущую переданный элемент в конец очереди. 
+      </p>
+<p>6. Функцию <span style=""><span style="font-weight:bold;"><span style="">size</span></span></span>, возвращающую количество элементов. 
+      </p>
+<p>7. Функцию <span style=""><span style="font-weight:bold;"><span style="">empty</span></span></span>, возвращающую true тогда и только тогда, когда очередь пуста. 
+      </p>
+<p>8. Операторы <span style=""><span style="font-weight:bold;"><span style="">==</span></span></span> и <span style=""><span style="font-weight:bold;"><span style="">!=</span></span></span> для сравнения двух очередей.
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В вашем решении должен быть только код класса и не должно быть функции main. При проверке наша программа test.cpp будет использовать
+            ваш класс <span style=""><span style="font-weight:bold;">Queue</span></span> и протестирует его. Если вы не реализовали какую-либо функцию или оператор, то программа не скомпилируется. 
+         </p></span><p>Все функции должны быть внутренними функциями-членами класса. </p>
+<p>Гарантируется, что используемый внутри очереди контейнер имеет функции push_back, pop_back, push_front, pop_front, front,
+         back, size, empty, operator == и operator !=.
+      </p>
+</div>
+</div>

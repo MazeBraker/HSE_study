@@ -1,0 +1,74 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Автобусы</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>0.2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>6Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Автобусы прибывают на остановку каждую минуту. В течение <span class="tex-math-text">N</span> минут приехало <span class="tex-math-text">N</span> автобусов, причем в <span class="tex-math-text">i</span>-ую минуту прибыл автобус с номером <span class="tex-math-text">A<sub>i</sub></span>. Так получилось, что для каждого номера рейса, проходящего через эту остановку, автобус с таким номером проезжал не менее
+            двух раз.
+         </p></span><p>Определите максимальное время между появлениями автобусов с одинаковыми номерами.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">2 ≤ N ≤ 10<sup>5</sup></span>) минут.
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> (<span class="tex-math-text">1 ≤ A<sub>i</sub> ≤ 10<sup>5</sup></span>) — номера автобусов, прибывших на остановку в течение этих <span class="tex-math-text">N</span> минут. Каждый номер встречается не менее двух раз.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — наибольшее время в минутах между последовательным появлением автобусов с одинаковыми номерами.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7
+23 5 3 3 23 5 23
+</pre></td>
+<td><pre>4
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+2 2 1 2 1
+</pre></td>
+<td><pre>2
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,98 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Количество путей (усложненный вариант)</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Имеется полоса, содержащая <span class="tex-math-text">N</span> клеток, пронумерованных от 1 до <span class="tex-math-text">N</span>. В клетке #1 находится фишка, которую требуется передвинуть в клетку #<span class="tex-math-text">N</span>. 
+         </p></span><p>За один ход фишку можно сдвинуть на не более чем <span class="tex-math-text">M</span> клеток вправо (то есть либо на одну, либо на две, ..., либо на <span class="tex-math-text">M</span>). 
+      </p>
+<p>Некоторые клетки полосы являются непроходимыми, и фишка не может заканчивать ход в таких клетках. </p>
+<p>Требуется подсчитать число различных способов перемещения фишки из клетки #1 в клетку #<span class="tex-math-text">N</span>. 
+      </p>
+<p>Эта задача отличается от более простой версии только величиной <span class="tex-math-text">N</span>. Если в более простой версии было достаточно алгоритма, работающего за <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XG1hdGhybXtPfShNTik=.png"/></span>, то здесь нужно придумать алгоритм, работающий за <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XG1hdGhybXtPfShOKQ==.png"/></span>. Вы точно уже сталкивались с этой ситуацией раньше в нашем курсе!
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целые числа <span class="tex-math-text">N</span> и <span class="tex-math-text">M</span> (<span class="tex-math-text">1 ≤ N ≤ 10<sup>5</sup></span>, <span class="tex-math-text">0 ≤ M ≤ N - 1</span>) — соответственно количество клеток в полосе и длину максимального хода фишки. 
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> чисел 0 или 1. <span class="tex-math-text">i</span>-е число равно 0, если клетка #<span class="tex-math-text">i</span> непроходима, и 1 в противном случае. Гарантируется, что клетка #1 является проходимой.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — количество различных способов перемещения фишки из клетки #1 в клетку #<span class="tex-math-text">N</span>. Ответ может оказаться очень большим, поэтому выведите остаток от его деления на 1000000007.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 2
+1 1 1 1 1
+</pre></td>
+<td><pre>5
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 2
+1 1 0 1 1
+</pre></td>
+<td><pre>1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>33 32
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+</pre></td>
+<td><pre>147483634
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

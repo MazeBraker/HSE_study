@@ -1,0 +1,122 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">G. Тарифные планы</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>С помощью методов машинного обучения компании X удалось выяснить, сколько денег каждый из клиентов компании готов платить
+            за ее услуги. По требованию федеральной антимонопольной службы компания X может продавать свои услуги по <span class="tex-math-text">K</span> различным ценам. Помогите менеджерам компании разработать <span class="tex-math-text">K</span> тарифов, чтобы максимизировать суммарную прибыль. Естественно, каждому клиенту будет предлагаться наиболее дорогой тариф,
+            который он может себе позволить (а о более дешевых менеджеры компании аккуратно промолчат). Если у клиента не хватает денег
+            даже на самый дешевый тариф, то он не будет обслуживаться компанией и принесет нулевую прибыль.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входного файла записаны два числа: количество клиентов компании <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 100</span>) и количество тарифов <span class="tex-math-text">K</span> (<span class="tex-math-text">1 ≤ K ≤ 100</span>). 
+         </p></span><p>Далее записано <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> — сумма, которую готов заплатить <span class="tex-math-text">i</span>-ый клиент (<span class="tex-math-text">0 ≤ A<sub>i</sub> ≤ 100000</span>). 
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите в выходной файл <span class="tex-math-text">K</span> натуральных чисел — стоимости тарифов в порядке возрастания. Стоимость тарифа не должен быть меньше 1 и не может превышать <span class="tex-math-text">10<sup>9</sup></span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>9 4
+9 1 5 5 5 5 4 8 80
+</pre></td>
+<td><pre>4 5 8 80 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 4
+1 2 30
+</pre></td>
+<td><pre>1 2 30 31 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>6 1
+0 4 3 5 13 6
+</pre></td>
+<td><pre>4 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 4</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 2
+0 1 0
+</pre></td>
+<td><pre>1 2 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>1. Мы не будем обслуживать клиента, который готов платить 1. Клиента, который готов платить 4, мы обслужим по первому тарифу.
+            Абонентов, готовых платить 5 – по второму, готовых платить 8 и 9 — по третьему, и готового платить 80 — по четвертому. Итого суммарный доход компании составит <span class="tex-math-text">4 + 5× 4 + 8× 2 + 80 = 120</span>
+</p></span><p>2. Обслуживаем каждого клиента по своему тарифу, 4-й тариф не используем. Суммарный доход — <span class="tex-math-text">1+2+30=33</span>
+</p>
+<p>3. Обслуживаем всех, кроме первого и третьего абонентов, по единственному тарифу. Суммарный доход — <span class="tex-math-text">4× 4 = 16</span>
+</p>
+<p>4. Поскольку мы не имеем права делать тариф с нулевой абонентской платой, то 1-го и 3-го абонентов обслуживать не будем.</p>
+</div>
+</div>

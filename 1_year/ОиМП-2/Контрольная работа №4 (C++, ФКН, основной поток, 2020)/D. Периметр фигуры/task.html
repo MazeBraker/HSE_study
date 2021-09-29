@@ -1,0 +1,66 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Периметр фигуры</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам надо написать базовый класс <span style=""><span style="font-weight:bold;">Figure</span></span> (геометрическая фигура) и унаследованные от него классы <span style=""><span style="font-weight:bold;">Triangle</span></span> (треугольник) и <span style=""><span style="font-weight:bold;">Rectangle</span></span> (прямоугольник). 
+         </p></span><p>Класс <span style=""><span style="font-weight:bold;">Triangle</span></span> должен иметь конструктор, принимающий на вход три числа типа int — стороны треугольника. Считайте, что треугольник с такими сторонами всегда существует. 
+      </p>
+<p>Класс <span style=""><span style="font-weight:bold;">Rectangle</span></span> тоже должен иметь конструктор, принимающий на вход два числа типа int — стороны прямоугольника. 
+      </p>
+<p>Класс <span style=""><span style="font-weight:bold;">Figure</span></span> должен объявлять виртуальную функцию int Perimeter() const, возвращающую периметр фигуры. Классы-наследники должны переопределить
+         эту функцию правильным образом. 
+      </p>
+<p>Функцию <span style=""><span style="font-weight:bold;">main</span></span> писать в вашем коде не надо: она будет в нашей проверяющей программе. Наша программа выглядит примерно так: 
+      </p>
+<p>#include "figures.h"<br/> <br/> #include &lt;vector&gt;<br/> #include &lt;iostream&gt;<br/> <br/> int main() {<br/>     std::vector&lt;Figure*&gt; figures;<br/> <br/>     std::string type;<br/> <br/>     while (std::cin <span style="">&gt;</span><span style="">&gt;</span> type) {<br/>         if (type == "Triangle") {<br/>             int a, b, c;<br/>             std::cin <span style="">&gt;</span><span style="">&gt;</span> a <span style="">&gt;</span><span style="">&gt;</span> b <span style="">&gt;</span><span style="">&gt;</span> c;<br/>             figures.push_back(new Triangle(a, b, c));<br/>         } else if (type == "Rectangle") {<br/>             int a, b;<br/>             std::cin <span style="">&gt;</span><span style="">&gt;</span> a <span style="">&gt;</span><span style="">&gt;</span> b;<br/>             figures.push_back(new Rectangle(a, b));<br/>         }<br/>     }<br/> <br/>     for (Figure * f : figures)<br/>         std::cout <span style="">&lt;</span><span style="">&lt;</span> f-&gt;Perimeter() <span style="">&lt;</span><span style="">&lt;</span> "\<span style=""></span>n";<br/> <br/>     for (Figure * f : figures)<br/>         delete f;<br/> }<br/>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На вход программе будут поданы типы фигур и их параметры.</p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Наша программа с помощью ваших классов напечатает периметры фигур.</p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>Triangle 3 4 5
+Rectangle 2 3
+</pre></td>
+<td><pre>12
+10
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Не забудьте, что некоторые функции класса необходимо сделать виртуальными для корректной полиморфной работы.</p></span></div>
+</div>

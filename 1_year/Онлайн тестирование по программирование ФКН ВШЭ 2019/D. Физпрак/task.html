@@ -1,0 +1,104 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Физпрак</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>512Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>На физическом практикуме Петр и Егор измеряют ускорение свободного падения <span class="tex-math-text">g</span> с помощью специального устройства. На некоторой положительной высоте устанавливается электромагнитная ловушка, удерживающая
+            металлический шарик. Как только один из ребят нажимает на кнопку, таймер начинает отсчёт, а электромагнит выключается и шарик
+            начинает свободное падение на стол. Таймер останавливается в момент когда шарик касается стола. 
+         </p></span><p>
+<div style="text-align:center;"><img class="user-image" src="/testsys/statement-image?imageId=1330697e406e955ec105e5f81f7f879ac648385ae605b363c196cf9b81a5a56f"/>
+</div>
+</p>
+<p>Петр установил шарик на высоте <span class="tex-math-text">h<sub>1</sub></span> метров и получил на таймере значение <span class="tex-math-text">t<sub>1</sub></span> секунд. Егор же <span style="font-weight:bold;">изменил</span> высоту на <span class="tex-math-text">h<sub>2</sub></span> и получил значение <span class="tex-math-text">t<sub>2</sub></span> секунд. Вычисляя значение <span class="tex-math-text">g</span> они получили значительно отличающиеся результаты и обратились к учителю за разъяснениями. 
+      </p>
+<p>Как это часто бывает с подобными «загадками природы», решение было достаточно простым: поскольку электромагнит теряет своё влияние на шарик не мгновенно, то существует фиксированное
+         время задержки между моментом запуска таймера и моментом, когда шарик действительно начнёт падать, равное <span class="tex-math-text">d</span> секунд. Ребята быстро поняли, как учесть время задержки и вычислить правильное значение <span class="tex-math-text">g</span>. А справитесь ли вы за пять часов? 
+      </p>
+<p>Считайте ускорение свободного падения и время задержки одинаковыми в обоих экспериментах. Сопротивлением воздуха и другими
+         эффектами пренебречь. 
+      </p>
+<p>Когда шарик, обладающий нулевой начальной скоростью, начинает движение под действием ускорения свободного падения <span class="tex-math-text">g</span>, расстояние, которое он пройдёт за <span class="tex-math-text">t</span> секунд, вычисляется по всем известной формуле: 
+      </p>
+<p>
+<div class="tex-math-block"><img class="tex-math" src="/testsys/tex/render/XHJobyh0KSA9IFxmcmFje2cgXGNkb3QgdF4yfXsyfQ==.png"/></div>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входных данных записаны два вещественных числа <span class="tex-math-text">h<sub>1</sub></span> и <span class="tex-math-text">t<sub>1</sub></span> (<span class="tex-math-text">0 &lt; h<sub>1</sub>, t<sub>1</sub> ≤ 10</span>) — высота в метрах, выбранная Петром, и результат его эксперимента соответственно. 
+         </p></span><p>Во второй строке записаны вещественные числа <span class="tex-math-text">h<sub>2</sub></span> и <span class="tex-math-text">t<sub>2</sub></span> (<span class="tex-math-text">0 &lt; h<sub>2</sub>, t<sub>2</sub> ≤ 10</span>, <span class="tex-math-text">h<sub>1</sub> ≠ h<sub>2</sub></span>) — высота в метрах и количество секунд на таймере в эксперименте Егора. 
+      </p>
+<p>Все числа во входных данных содержат не больше трёх цифр после десятичной точки. </p>
+<p>Гарантируется, что входных данные имеют смысл, то есть существуют некоторые <span style="font-weight:bold;">положительные</span> вещественные числа <span class="tex-math-text">g</span> и <span class="tex-math-text">d</span>, порождающие именно такие результаты эксперимента.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите время задрежки электромагнита <span class="tex-math-text">d</span> в секундах. Ваш ответ будет считаться правильным, если его абсолютная или относительная ошибка не будет превосходить <span class="tex-math-text">10<sup>-4</sup></span>. 
+         </p></span><p>А именно: пусть ваш ответ равен <span class="tex-math-text">a</span>, а ответ жюри — <span class="tex-math-text">b</span>. Проверяющая программа будет считать ваш ответ правильным, если <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/XGZyYWN7fGEtYnx9e1xtYXgoMSxiKX0gXGxlcSAxMF57LTR9.png"/></span>.
+      </p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>1.495 2.009
+7.674 2.708
+</pre></td>
+<td><pre>1.456709
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5 1.25
+1.25 0.75
+</pre></td>
+<td><pre>0.250000
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В первом примере ускорение свободного падения <span class="tex-math-text">g</span> примерно равно <span class="tex-math-text">9.80246</span>, а во втором примере оно равно <span class="tex-math-text">10</span>. 
+         </p></span><p>Обратите внимание, что в тестовых данных значение <span class="tex-math-text">g</span> может быть произвольным, не гарантируется, что оно совпадает с ускорение свободного падения на поверхности какой-либо планеты.
+         
+      </p>
+</div>
+</div>

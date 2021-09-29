@@ -1,0 +1,92 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">B. Раскраска в три цвета</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Петя нарисовал на бумаге <span class="tex-math-text">n</span> кружков и соединил некоторые пары кружков линиями. После этого он раскрасил каждый кружок в один из трех цветов — красный, синий или зеленый.
+         </p></span><p>Теперь Петя хочет изменить их раскраску. А именно — он хочет перекрасить каждый кружок в некоторый другой цвет так, чтобы никакие два кружка одного цвета не были соединены линией.
+         При этом он хочет обязательно перекрасить каждый кружок, а перекрашивать кружок в тот же цвет, в который он был раскрашен
+         исходно, не разрешается.
+      </p>
+<p>Помогите Пете решить, в какие цвета следует перекрасить кружки, чтобы выполнялось указанное условие.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит два целых числа <span class="tex-math-text">n</span> и <span class="tex-math-text">m</span> — количество кружков и количество линий, которые нарисовал Петя, соответственно (<span class="tex-math-text">1 ≤ n ≤ 1 000</span>, <span class="tex-math-text">0 ≤ m ≤ 20 000</span>).
+         </p></span><p>Следующая строка содержит <span class="tex-math-text">n</span> символов из множества {‘<span class="tex-monospace">R</span>’, ‘<span class="tex-monospace">G</span>’, ‘<span class="tex-monospace">B</span>’} — <span class="tex-math-text">i</span>-й из этих символов означает цвет, в который раскрашен <span class="tex-math-text">i</span>-й кружок (‘<span class="tex-monospace">R</span>’ — красный, ‘<span class="tex-monospace">G</span>’ — зеленый, ‘<span class="tex-monospace">B</span>’ — синий).
+      </p>
+<p>Следующие <span class="tex-math-text">m</span> строк содержат по два целых числа — пары кружков, соединенных отрезками.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одну строку, состоящую из <span class="tex-math-text">n</span> символов из множества {‘<span class="tex-monospace">R</span>’, ‘<span class="tex-monospace">G</span>’, ‘<span class="tex-monospace">B</span>’} — цвета кружков после перекраски. Если решений несколько, выведите любое.
+         </p></span><p>Если решения не существует, выведите слово «<span class="tex-monospace">Impossible</span>».
+      </p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 5
+RRRG
+1 3
+1 4
+3 4
+2 4
+2 3
+</pre></td>
+<td><pre>GGBR
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 5
+RGRR
+1 3
+1 4
+3 4
+2 4
+2 3
+</pre></td>
+<td><pre>Impossible
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

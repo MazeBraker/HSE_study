@@ -1,0 +1,82 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Такси</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>0.5 секунд</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Управлять службой такси — сосвем не простое дело. Помимо естественной необходимости централизованного управления машинами для того, чтобы обслуживать
+            заказы по мере их поступления и как можно быстрее, нужно также планировать поездки для обслуживания тех клиентов, которые
+            сделали заказы заранее.
+         </p></span><p>В вашем распоряжении находится список заказов такси на следующий день. Вам необходимо минимимизировать число машин такси,
+         необходимых чтобы выполнить все заказы.
+      </p>
+<p>Для простоты будем считать, что план города представляет собой квадратную решетку. Адрес в городе будем обозначать парой целых
+         чисел: <span class="tex-math-text">x</span>-координатой и <span class="tex-math-text">y</span>-координатой. Время, необходимое для того, чтобы добраться из точки с адресом <span class="tex-math-text">(a,b)</span> в точку <span class="tex-math-text">(c,d)</span>, равно <span class="tex-math-text">|a - c| + |b - d|</span> минут. Машина такси может выполнить очередной заказ, либо если это первый ее заказ за день, либо она успевает приехать в
+         начальную точку из предыдущей конечной хотя бы за минуту до указанного срока. Обратите внимание, что выполнение некоторых
+         заказов может окончиться после полуночи.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входного файла записано число заказов <span class="tex-math-text">M</span> (<span class="tex-math-text">0 &lt; M &lt; 500</span>). Последующие <span class="tex-math-text">M</span> строк описывают сами заказы, по одному в строке. Про каждый заказ указано время отправления в формате <span class="tex-monospace">hh:mm</span> (в интервале с <span class="tex-monospace">00:00</span> по <span class="tex-monospace">23:59</span>), координаты <span class="tex-math-text">(a, b)</span> точки отправления и координаты <span class="tex-math-text">(c, d)</span> точки назначения. Все координаты во входном файле неотрицательные и не превосходят 200. Заказы записаны упорядоченными по времени отправления.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>В выходной файл выведите единственное целое число — минимальное количество машин такси, необходимых для обслуживания всех заказов.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2
+08:00 10 11 9 16
+08:07 9 16 10 11
+</pre></td>
+<td><pre>1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2
+08:00 10 11 9 16
+08:06 9 16 10 11
+</pre></td>
+<td><pre>2
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

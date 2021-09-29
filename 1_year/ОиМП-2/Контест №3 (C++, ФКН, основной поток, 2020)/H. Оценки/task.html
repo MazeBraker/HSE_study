@@ -1,0 +1,65 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">H. Оценки</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Преподаватель Васиной группы наконец-то начал объявлять оценки за прошедшие работы. Так как важен не набор оценок, а средняя,
+            то после каждого объявления студент, которому сообщили новую оценку, хочет знать среднее своих оценок по уже объявленным работам.
+            Напишите программу, которая избавит Васиных одногруппников от лишнего ручного счета.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла - целое число <span class="tex-math-text">N</span> от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>5</sup></span> - общеее количество оценок. 
+         </p></span><p>Далее идут <span class="tex-math-text">N</span> строк, каждая из которых содержит фамилию очередного студента (строка из латинских букв длиной от <span class="tex-math-text">1</span> до <span class="tex-math-text">20</span> символов) и его оценку - целое число от <span class="tex-math-text">0</span> до <span class="tex-math-text">10<sup>9</sup></span>.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите <span class="tex-math-text">N</span> строк. <span class="tex-math-text">k</span>-я строка должна содержать среднюю оценку студента, которому была выставлена <span class="tex-math-text">k</span>-я оценка в исходном списке, после объявления <span class="tex-math-text">k</span> оценок. Средняя оценка округляется до ближайшего целого вниз (то есть, от нее отбрасывается дробная часть).
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+petrov 3
+sidorov 8
+petrov 5
+petrov 3
+ivanov 9
+</pre></td>
+<td><pre>3
+8
+4
+3
+9
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

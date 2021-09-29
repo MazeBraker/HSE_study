@@ -1,0 +1,98 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Общая подпоследовательность максимального веса</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>4 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Даны строки <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span>, состоящие из строчных латинских букв. Каждая латинская буква от <span class="tex-monospace">a</span> до <span class="tex-monospace">z</span> характеризуется числовым весом <span class="tex-math-text">W<sub>i</sub></span>.
+         </p></span><p>Определите общую подпоследовательность строк <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span>, имеющую наибольший суммарный вес входящих в неё букв.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит последовательность <span class="tex-math-text">A</span> (<span class="tex-math-text">1 ≤ |A| ≤ 1000</span>), состоящую из строчных латинских букв.
+         </p></span><p>Вторая строка содержит последовательность <span class="tex-math-text">B</span> (<span class="tex-math-text">1 ≤ |B| ≤ 1000</span>), состоящую из строчных латинских букв.
+      </p>
+<p>Третья строка содержит 26 целых чисел <span class="tex-math-text">W<sub>i</sub></span> (<span class="tex-math-text">0 ≤ W<sub>i</sub> ≤ 1000</span>) — веса символов от <span class="tex-monospace">a</span> до <span class="tex-monospace">z</span>.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — максимальный вес общей подпоследовательности строк <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span>. Если у строк <span class="tex-math-text">A</span> и <span class="tex-math-text">B</span> нет общих символов, выведите число 0.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>python
+path
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+</pre></td>
+<td><pre>3
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>semantics
+simulation
+3 5 2 4 3 6 2 0 3 4 5 2 8 3 1 7 9 9 2 0 3 1 4 2 4 1
+</pre></td>
+<td><pre>16
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>investigation
+obstructive
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 100 1 1 1 1 1 1 1 1 1 1 1
+</pre></td>
+<td><pre>100
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

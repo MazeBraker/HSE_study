@@ -1,0 +1,101 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Магазины</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>10Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Фирма A продаёт книги в <span style="font-weight:bold;"><span class="tex-math-text">N</span></span> городах. В <span style="font-weight:bold;"><span class="tex-math-text">K</span></span> городах у фирмы A есть свой склад и магазин, и поэтому в них нет проблемы с тем, чтобы доставить товар вовремя и в нужном
+            объёме, а в остальных <span style="font-weight:bold;"><span class="tex-math-text">N - K</span></span> городах у фирмы A есть только магазин, и туда приходится подвозить книги из городов, в которых у фирмы есть склады. 
+         </p></span><p>Города соединены сетью платных автобанов, стоимость использования которых <span style="font-weight:bold;"><span class="tex-math-text">P<sub>ij</sub></span></span> не зависит от количества перевозимого груза. Также известно, что любой из складов фирмы A способен обеспечить товаром любое
+         количество магазинов, и между любыми двумя городами проходит не больше одного автобана. Движение по всем автобанам возможно
+         в обе стороны. 
+      </p>
+<p>За какую минимальную стоимость пользования дорогами фирма A может организовать доставку книг все свои магазины?</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит через пробел три числа: 
+            <ul>
+<li><span style="font-weight:bold;"><span class="tex-math-text">N (1 ≤ N ≤ 10<sup>5</sup>)</span></span> - число городов, 
+               </li>
+<li><span style="font-weight:bold;"><span class="tex-math-text">M (1 ≤ M ≤ min(N(N-1)/2, 10<sup>6</sup>))</span></span> - число автобанов, соединяющих эти города, 
+               </li>
+<li><span style="font-weight:bold;"><span class="tex-math-text">K (1 ≤ K ≤ N)</span></span> - максимальный номер города, в котором у фирмы A есть склад: во всех городах <span style="font-weight:bold;"><span class="tex-math-text">1 ≤ i ≤ K</span></span> есть склад, во всех городах <span style="font-weight:bold;"><span class="tex-math-text">K &lt; i ≤ N</span></span> есть магазин, но склада нет. 
+               </li>
+</ul>
+</p></span><p>Следующие <span style="font-weight:bold;"><span class="tex-math-text">2 * M</span></span> строк содержат отсортированный по паре городов список автобанов. Каждая строка содержит через пробел три числа: 
+         <ul>
+<li><span style="font-weight:bold;"><span class="tex-math-text">i (1 ≤ i ≤ N)</span></span> - начальный город автобана, 
+            </li>
+<li><span style="font-weight:bold;"><span class="tex-math-text">j (1 ≤ j ≤ N)</span></span> - конечный город автобана, 
+            </li>
+<li><span style="font-weight:bold;"><span class="tex-math-text">P<sub>ij</sub> (0 ≤ P<sub>ij</sub> ≤ 10<sup>3</sup>)</span></span> - стоимость перевозки груза по этому автобану. 
+            </li>
+</ul>
+</p>
+<p>Каждый автобан указан два раза - для прямого порядка городов и для обратного.</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Вывод должен состоять из одного числа - минимальной стоимости пользования дорожной сетью, при которой фирма A может обеспечить
+            книгами все свои магазины.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7 10 2
+1 3 2
+1 7 1
+2 5 1
+2 6 2
+3 1 2
+3 4 1
+3 6 1
+4 3 1
+4 5 3
+4 6 1
+4 7 3
+5 2 1
+5 4 3
+5 7 2
+6 2 2
+6 3 1
+6 4 1
+7 1 1
+7 4 3
+7 5 2</pre></td>
+<td><pre>6</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Следует считать, что каждый сегмент дорожной сети <span style="font-weight:bold;"><span class="tex-math-text">(i, j)</span></span> обеспечен отдельным грузовиком достаточной вместимости для перевозки партии груза любого объёма, его стоимость не зависит
+            от объёма груза, перевозимого этим грузовиком, и уже учтена в <span style="font-weight:bold;"><span class="tex-math-text">P<sub>ij</sub></span></span>.
+         </p></span></div>
+</div>

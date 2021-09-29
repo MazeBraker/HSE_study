@@ -1,0 +1,72 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">L. UTF-8: декодирование</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>В кодировке UTF-8 каждый символ из таблицы Unicode кодируется одним, двумя, тремя или четыремя байтами в зависимости от своего
+            кода. Последовательности байтов могут иметь вид либо 0xxxxxxx, либо 110xxxxx 10xxxxxx, либо 1110xxxx 10xxxxxx 10xxxxxx, либо
+            11110xxx 10xxxxxx 10xxxxxx 10xxxxxx. Биты, обозначенные символом x, склеиваются вместе и образуют код закодированного символа.
+            Вам требуется по заданной последовательности байтов UTF-8 выписать коды закодированных символов.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На вход подаётся набор байтов (текст, закодированный в UTF-8). Вы можете считать его в std::string. Размер текста не превосходит
+            1024 байт.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>Hello!
+</pre></td>
+<td><pre>72 101 108 108 111 33 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>Привет, мир!
+</pre></td>
+<td><pre>1055 1088 1080 1074 1077 1090 44 32 1084 1080 1088 33 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Выпишите коды закодированных символов в десятичной системе счисления через пробел.</p></span></div>
+</div>

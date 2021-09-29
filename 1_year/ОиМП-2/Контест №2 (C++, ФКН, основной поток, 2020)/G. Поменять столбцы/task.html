@@ -1,0 +1,117 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">G. Поменять столбцы</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан двумерный массив и два числа <span class="tex-math-text">i</span> и <span class="tex-math-text">j</span>. Поменяйте в массиве столбцы с номерами <span class="tex-math-text">i</span> и <span class="tex-math-text">j</span>. 
+         </p></span><p>Оформите решение в виде функции </p>
+<p>void swap_columns(std::vector&lt;std::vector&lt;int<span style=""></span>&gt;<span style=""></span>&gt;&amp; matrix, size_t i, size_t j);
+      </p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 4
+11 12 13 14
+21 22 23 24
+31 32 33 34
+0 1
+</pre></td>
+<td><pre>12 11 13 14
+22 21 23 24
+32 31 33 34
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 2
+1 2
+3 4
+0 1
+</pre></td>
+<td><pre>2 1
+4 3
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10 1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0 0
+</pre></td>
+<td><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В вашей программе не должно быть функции main, а должна быть только функция swap_columns. Мы при проверке соберём ваш код
+            с нашей функцией main. Примеры ввода-вывода даны только для демонстрации: вам не требуется вводить данные и печатать результат
+            самостоятельно.
+         </p></span></div>
+</div>

@@ -1,0 +1,64 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Улиточки</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Две улиточки Маша и Петя сейчас находятся на лужайке с абрикосами и хотят добраться до своего домика. Лужайки пронумерованы
+            числами от 1 до <span class="tex-math-text">n</span> и соединены дорожками (может быть несколько дорожек соединяющих две лужайки, могут быть дорожки, соединяющие лужайку с собой
+            же). Ввиду соображений гигиены, если по дорожке проползла улиточка, то вторая по той же дорожке уже ползти не может. Помогите
+            Пете и Маше добраться до домика.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке файла записаны четыре целых числа — <span class="tex-math-text">n</span>, <span class="tex-math-text">m</span>, <span class="tex-math-text">a</span> и <span class="tex-math-text">h</span> (количество лужаек, количество дорог, номер лужайки с абрикосами и номер домика).
+         </p></span><p>В следующих <span class="tex-math-text">m</span> строках записаны пары чисел. Пара чисел <span class="tex-math-text">(x, y)</span> означает, что есть дорожка с лужайки <span class="tex-math-text">x</span> до лужайки <span class="tex-math-text">y</span> (из-за особенностей улиток и местности дорожки односторонние).
+      </p>
+<p>Ограничения: <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MiBcbGUgbiBcbGUgMTBeNSwgMCBcbGUgbSBcbGUgMTBeNSwgYSBcbm90PSBo.png"/></span></p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Если существует решение, то выведите <span class="tex-monospace">YES</span> и на двух отдельных строчках сначала путь для Машеньки (т.к. дам нужно пропускать вперед), затем путь для Пети. Если решения
+            не существует, выведите <span class="tex-monospace">NO</span>. Если решений несколько, выведите любое.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 3 1 3
+1 2
+1 3
+2 3
+</pre></td>
+<td><pre>YES
+1 3 
+1 2 3 
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

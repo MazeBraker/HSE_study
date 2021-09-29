@@ -1,0 +1,62 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Подсчет n-грамм слов</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>0.5 секунд</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>N-граммой слов текста называется последовательность из N последовательно идущих слов в тексте (см. пример). Для данного числа
+            N подсчитайте число каждой N-граммы в тексте.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке подается M — число слов в тексте (в пределах от 1 до 100000) и N — длина N-граммы (от 1 до 5). Далее (возможно, на разных строках) идет M слов. Можно считать, что слова отделены пробелами
+            или переносами строки; обработку пунктуации и регистра реализовывать не нужно. Считывайте слова просто через std::cin <span style="">&gt;</span><span style="">&gt;</span> s.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите все N-граммы, склеив их в строки через пробел. Отсортируйте их по частоте (выше должны находиться более частые),
+            а в случае равных частот — лексикографически. Для каждой N-граммы напечатайте также ее частоту (см. формат в примере).
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>6 2
+to be or not to be
+</pre></td>
+<td><pre>to be - 2
+be or - 1
+not to - 1
+or not - 1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Если M &lt; N, то N-грамм в тексте нет, и нужно просто ничего не выводить.</p></span></div>
+</div>

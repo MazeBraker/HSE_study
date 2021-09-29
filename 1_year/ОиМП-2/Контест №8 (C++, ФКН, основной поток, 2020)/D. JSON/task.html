@@ -1,0 +1,121 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. JSON</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Данные часто нужно сериализовывать, то есть превращать в строку. Это нужно для сохранения на диске, для отправки по сети,
+            для передачи другому процессу. Часто для этого используются несколько общепринятых форматов данных, таких как JSON, YAML,
+            XML. Поскольку на этапе компиляции не всегда известно, в каком именно формате надо сериализовывать данные, часто приходится
+            прибегать к наследованию. Вам необходимо реализовать класс Serializer с чисто виртуальными методами 
+            <ul>
+<li>void BeginArray() </li>
+<li>void AddArrayItem(const std::string &amp;) </li>
+<li>void EndArray() </li>
+</ul>После этого унаследуйте от него класс JsonSerializer, определив все эти методы. 
+         </p></span><p>JsonSerializer должен печатать упрощенную версию JSON'а (https://ru.wikipedia.org/wiki/JSON), состояющую только из массивов
+         и строк. Массив начинается с квадратной скобки. После каждого элемента, кроме последнего, должна стоять запятая. Заканчивается
+         массив квадратной скобкой. Все строки должны быть взяты в двойные кавычки. Гарантируется, что все строки состоят только из
+         латинских символов и пробелов, поэтому экранировать их не надо. 
+      </p>
+<p>Сдайте в систему только код классов, без функции main. Для полной ясности формата вывода посмотрите на примеры из условия.</p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>BeginArray
+EndArray
+</pre></td>
+<td><pre>[]</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>BeginArray
+AddArrayItem string
+EndArray
+</pre></td>
+<td><pre>["string"]</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>BeginArray
+AddArrayItem first
+AddArrayItem second
+EndArray
+</pre></td>
+<td><pre>["first","second"]</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 4</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>BeginArray
+BeginArray
+EndArray
+EndArray
+</pre></td>
+<td><pre>[[]]</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Не надо определять для вашего класса operator<span style="">&lt;</span><span style="">&lt;</span>. Печать должна происходить в функциях, указанных в условии. 
+         </p></span><p>Мы будем работать с экземпляром вашего класса JsonSerializer полиморфно, через указатель на базовый класс Serializer. Поэтому
+         не забудьте про виртуальный деструктор.
+      </p>
+</div>
+</div>

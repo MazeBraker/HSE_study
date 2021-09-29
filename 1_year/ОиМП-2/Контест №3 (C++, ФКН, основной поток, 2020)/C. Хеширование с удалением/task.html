@@ -1,0 +1,113 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Хеширование с удалением</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>5 секунд</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Используйте unordered_set для реализации множества строк. </p></span><p>Хранимые строки  – непустые последовательности  длиной не более 10 символов, состоящие из строчных латинских букв. Структура
+         данных должна поддерживать операции добавления строки в множество, удаления строки из множества и проверки принадлежности
+         данной строки множеству. Максимальное количество элементов в хранимом множестве не превосходит <span class="tex-math-text">10<sup>6</sup></span>.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Каждая строка входных данных задает одну операцию над множеством. </p>
+<p>Запись операции состоит из типа операции и следующей за ним через пробел строки, над которой проводится операция. Тип операции
+            – один из трех символов:     
+         </p>
+<p>+  означает добавление данной строки в множество;      </p>
+<p>-  означает удаление  строки из множества;       </p>
+<p>?  означает проверку принадлежности данной строки множеству. </p>
+<p>Общее количество операций во входном файле не превосходит <span class="tex-math-text">10<sup>6</sup></span>. Список операций завершается строкой, в которой записан один символ # – признак конца входных данных. 
+         </p>
+<p>При добавлении элемента в множество НЕ ГАРАНТИРУЕТСЯ, что он отсутствует в этом множестве. При удалении элемента из множества
+            НЕ ГАРАНТИРУЕТСЯ, что он присутствует в этом множестве. 
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Программа должна вывести для каждой операции типа ? одну из двух строк YES или NO, в зависимости от того, встречается ли данное
+            слово в нашем множестве. 
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>+ hello
++ bye
+? bye
+- bye
+? bye
+? hello
+#
+</pre></td>
+<td><pre>YES
+NO
+YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>? qwertyuiop
+#
+</pre></td>
+<td><pre>NO
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>? asdfghjklz
++ asdfghjklz
+? asdfghjklz
+#
+</pre></td>
+<td><pre>NO
+YES
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

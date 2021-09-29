@@ -1,0 +1,124 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">I. Транспонировать прямоугольную матрицу</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан двумерный массив размером <span class="tex-math-text">n × m</span> (<span class="tex-math-text">n</span>, <span class="tex-math-text">m</span> &lt; 1000). Симметричный ему относительно главной диагонали массив называется транспонированным к данному. Он имеет размеры
+            <span class="tex-math-text">m × n</span>: строки исходного массива становятся столбцами транспонированного, столбцы исходного массива становятся строками транспонированного.
+            
+         </p></span><p>Для данного массива постройте транспонированный массив. </p>
+<p>Решение оформите в виде функции: </p>
+<p>std::vector&lt;std::vector&lt;int<span style=""></span>&gt;<span style=""></span>&gt; transpose(const std::vector&lt;std::vector&lt;int<span style=""></span>&gt;<span style=""></span>&gt;&amp; matrix). 
+      </p>
+<p></p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 4
+11 12 13 14
+21 22 23 24
+31 32 33 34
+</pre></td>
+<td><pre>11 21 31 
+12 22 32 
+13 23 33 
+14 24 34 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>9 10
+10 11 12 13 14 15 16 17 18 19 
+20 21 22 23 24 25 26 27 28 29 
+30 31 32 33 34 35 36 37 38 39 
+40 41 42 43 44 45 46 47 48 49 
+50 51 52 53 54 55 56 57 58 59 
+60 61 62 63 64 65 66 67 68 69 
+70 71 72 73 74 75 76 77 78 79 
+80 81 82 83 84 85 86 87 88 89 
+90 91 92 93 94 95 96 97 98 99 
+</pre></td>
+<td><pre>10 20 30 40 50 60 70 80 90 
+11 21 31 41 51 61 71 81 91 
+12 22 32 42 52 62 72 82 92 
+13 23 33 43 53 63 73 83 93 
+14 24 34 44 54 64 74 84 94 
+15 25 35 45 55 65 75 85 95 
+16 26 36 46 56 66 76 86 96 
+17 27 37 47 57 67 77 87 97 
+18 28 38 48 58 68 78 88 98 
+19 29 39 49 59 69 79 89 99 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>1 10
+1 2 3 4 5 6 7 8 9 10
+</pre></td>
+<td><pre>1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В вашей программе не должно быть функции main, а должна быть только функция transpose. Мы при проверке соберём ваш код с нашей
+            функцией main. Примеры ввода-вывода даны только для демонстрации: вам не требуется вводить данные и печатать результат самостоятельно.
+         </p></span></div>
+</div>

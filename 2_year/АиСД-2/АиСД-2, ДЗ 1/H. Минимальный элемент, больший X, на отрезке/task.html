@@ -1,0 +1,99 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">H. Минимальный элемент, больший X, на отрезке</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан целочисленный массив <span class="tex-math-text">A</span>, состоящий из <span class="tex-math-text">N</span> элементов. 
+         </p></span><p>Обработайте <span class="tex-math-text">Q</span> запросов следующего вида: 
+         <ul>
+<li><span class="tex-math-text">L</span> <span class="tex-math-text">R</span> <span class="tex-math-text">X</span> — определить минимальный элемент, индекс которого принадлежит отрезку от <span class="tex-math-text">L</span> до <span class="tex-math-text">R</span> включительно, а значение превышает <span class="tex-math-text">X</span>. Если отрезок не содержит подходящего числа, ответом является <span class="tex-monospace">NONE</span>. 
+            </li>
+</ul>
+</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 2 ⋅ 10<sup>5</sup></span>) — размер массива. 
+         </p></span><p>Вторая строка содержит <span class="tex-math-text">N</span> целых чисел <span class="tex-math-text">A<sub>i</sub></span> (<span class="tex-math-text">-10<sup>9</sup> ≤ A<sub>i</sub> ≤ 10<sup>9</sup></span>) — элементы массива. 
+      </p>
+<p>Третья строка содержит целое число <span class="tex-math-text">Q</span> (<span class="tex-math-text">1 ≤ Q ≤ 2 ⋅ 10<sup>5</sup></span>) — количество запросов. 
+      </p>
+<p>Следующие <span class="tex-math-text">Q</span> строк описывают запросы. Каждая из них содержит целые числа <span class="tex-math-text">L<sub>j</sub></span>, <span class="tex-math-text">R<sub>j</sub></span> и <span class="tex-math-text">X<sub>j</sub></span> (<span class="tex-math-text">0 ≤ L<sub>j</sub> ≤ R<sub>j</sub> &lt; N</span>, <span class="tex-math-text">-10<sup>9</sup> ≤ X<sub>j</sub> ≤ 10<sup>9</sup></span>) — соответственно границы отрезка и значение, которое требуется превысить.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Для каждого запроса выведите в отдельной строке одно целое число — минимальный элемент, принадлежащий отрезку и превышающий <span class="tex-math-text">X</span>. Если подходящего элемента не существует, следует вывести <span class="tex-monospace">NONE</span>.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+1 2 3 4 5
+3
+0 3 2
+0 4 10
+2 4 3
+</pre></td>
+<td><pre>3
+NONE
+4
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10
+4 -2 5 7 -6 1 9 -3 -4 8
+5
+0 2 3
+0 9 0
+7 9 1
+4 6 -5
+6 8 10
+</pre></td>
+<td><pre>4
+1
+8
+1
+NONE
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

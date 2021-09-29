@@ -1,0 +1,41 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">J. set_difference</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам надо написать свою реализацию стандартного алгоритма <span style=""><span style="font-weight:bold;">set_difference</span></span>. Заголовок функции должен быть таким: 
+         </p></span><p>template &lt;typename InIter1, typename InIter2, typename OutIter&gt;<br/> OutIter set_difference(InIter1 first1, InIter1 last1, InIter2 first2, InIter2 last2, OutIter out); 
+      </p>
+<p>Под словом set (множество) здесь понимается не математическое множество и даже не контейнер std::set, а просто отсортированная
+         последовательность. 
+      </p>
+<p>Функция должна сформировать элементы разности множеств [first1, last1) и [first2, last2) и записать их в последовательность,
+         начинающуюся с out. Исходные интервалы предполагаются отсортированными. Каждый элемент считается со своей кратностью. Функция
+         возвращает итератор, указывающий за последний записанный элемент.
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В вашем решении должен быть только код этой шаблонной функции и не должно быть функции main. При проверке наша программа test.cpp
+            будет использовать ваш алгоритм <span style=""><span style="font-weight:bold;">set_difference</span></span>. Ваша программа должна использовать константную память и быть линейной по сложности.
+         </p></span></div>
+</div>

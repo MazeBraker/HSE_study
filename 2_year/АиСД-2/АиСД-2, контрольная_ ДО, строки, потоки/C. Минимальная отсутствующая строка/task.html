@@ -1,0 +1,80 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Минимальная отсутствующая строка</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>2 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Дан текст <span class="tex-math-text">S</span>, состоящий из <span class="tex-math-text">N</span> символов. В тексте встречаются только первые 10 строчных латинских букв (от <span class="tex-monospace">a</span> до <span class="tex-monospace">j</span>).
+         </p></span><p>Требуется найти строку минимальной длины, не содержащуюся в тексте. Если подходящих строк несколько, требуется вывести лексикографически
+         минимальную (первую по алфавиту).
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка содержит целое число <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 10<sup>6</sup></span>) — длину текста <span class="tex-math-text">S</span>.
+         </p></span><p>Вторая строка содержит текст <span class="tex-math-text">S</span>, состоящий из <span class="tex-math-text">N</span> строчных латинских букв от <span class="tex-monospace">a</span> до <span class="tex-monospace">j</span>.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите минимальную строку, отсутствующую в тексте.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+aab
+</pre></td>
+<td><pre>c
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>22
+aabacbbcadaeafagahaiaj
+</pre></td>
+<td><pre>bd
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Результат — достаточно короткая строка. Сложите в бор все подстроки текста достаточной длины, а затем найдите ответ с помощью обхода
+            этого бора.
+         </p></span></div>
+</div>

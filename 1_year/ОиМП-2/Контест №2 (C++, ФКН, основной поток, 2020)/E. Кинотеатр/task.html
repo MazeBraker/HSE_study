@@ -1,0 +1,113 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Кинотеатр</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>В кинотеатре <span class="tex-math-text">n</span> рядов по <span class="tex-math-text">m</span> мест в каждом. В двумерном массиве хранится информация о проданных билетах. Число 1 означает, что билет на данное место уже
+            продан, число 0 означает, что место свободно. Поступил запрос на продажу <span class="tex-math-text">k</span> билетов на соседние места в одном ряду. Определите, можно ли выполнить такой запрос. 
+         </p></span><p></p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Программа получает на вход натуральные числа <span class="tex-math-text">n</span> и <span class="tex-math-text">m</span>, не превосходящие 100. Далее идет <span class="tex-math-text">n</span> строк, содержащих <span class="tex-math-text">m</span> чисел (0 или 1), разделенных пробелами. Затем дано число <span class="tex-math-text">k</span>.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Программа должна вывести номер ряда, в котором есть <span class="tex-math-text">k</span> подряд идущих свободных мест. Если таких рядов несколько, то выведите номер наименьшего подходящего ряда. Если подходящего
+            ряда нет, выведите число 0. 
+         </p></span><p></p>
+</div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 4
+0 1 0 1
+1 0 0 1
+1 1 1 1
+2
+</pre></td>
+<td><pre>2
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 3
+0 1 0
+1 0 0
+1 1 1
+3
+</pre></td>
+<td><pre>0
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>11 5
+1 1 1 1 0 
+0 0 0 0 1 
+1 0 1 1 1 
+0 1 0 0 0 
+1 1 1 0 0 
+1 1 1 1 0 
+1 0 1 0 0 
+0 1 1 0 0 
+0 1 0 0 0 
+0 1 0 1 0 
+1 1 1 1 0 
+1
+</pre></td>
+<td><pre>1
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Ряды нумеруются с единицы "сверху вниз", то есть, сначала описаны места в первом ряду, потом - во втором, и т. д.</p></span></div>
+</div>

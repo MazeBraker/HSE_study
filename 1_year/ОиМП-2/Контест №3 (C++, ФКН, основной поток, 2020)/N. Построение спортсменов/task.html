@@ -1,0 +1,67 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">N. Построение спортсменов</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>У каждого спортсмена на футболке написан уникальный номер. Спортсмены по очереди выходят из раздевалки и должны построиться
+            на стадионе. Тренер каждому выходящему спортсмену называет номер. Выходящий спортсмен должен встать после спортсмена с таким
+            номером на футболке (а если такого спортсмена на поле нет — встать в начало).
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Сначала задано натуральное число <span class="tex-math-text">n</span>, не превосходящее 100000 — количество спортсменов. Далее идут <span class="tex-math-text">n</span> пар неотрицательных целых чисел, не превосходящих 100000. Первое число в паре — номер очередного выходящего спортсмена. Второе число в паре — номер того спортсмена, после которого текущий должен встать.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Напечатайте номера спорстменов после построения.</p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>5
+42 0
+17 42
+13 0
+123 42
+5 13
+</pre></td>
+<td><pre>13
+5
+42
+123
+17
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Решение с линейным поиском нужного места не пройдёт по времени. Используйте вспомогательную структуру данных, чтобы быстро
+            находить то место, в которое нужно встать.
+         </p></span></div>
+</div>

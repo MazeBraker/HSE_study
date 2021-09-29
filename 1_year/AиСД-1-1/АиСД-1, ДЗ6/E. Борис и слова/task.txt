@@ -1,0 +1,186 @@
+
+
+E. Борис и слова
+
+
+Ограничение времени
+6 секунд
+
+
+Ограничение памяти
+256Mb
+
+
+Ввод
+стандартный ввод или input.txt
+
+
+Вывод
+стандартный вывод или output.txt
+
+
+
+
+
+В некоторых языках нет пробелов, и при чтении предложений люди разбивают их на слова на глаз. Например, при хорошей сноровке
+            нетрудно разбить 在评论分享你的想法。→ 在 评论 分享 你 的 想法 。. 
+         Борис решил этому научиться и начал со знакомого языка: inotherson → in others on
+
+Впрочем Борис быстро заметил что способ разбиения не всегда один: 
+         
+inotherson → in others on
+
+inotherson → i not her son
+
+inotherson → i not he r son
+
+inotherson → in other son
+
+inotherson → i not hers on
+
+inotherson → i no the r son
+
+Помогите Борису разбить предложения на слова оптимальным способом, чтобы полученное разбиение было самым естественным. 
+Самым естественным мы назовем разбиение при котором произведение языковых частотносетй слов макcимально. К задаче прилагается
+                  счетчик слов, полученный по крупному корпусу текстов, в котором для каждого слова указано количество вхождений в корпус. Частотность
+                  слова принимаем равной его счетчику деленному на сумму всех счетчиков. Для неизвестных слов считаем частоту равной 1 / сумму
+                  всех счетчиков если слово состоит из одной буквы и 0 иначе.
+               
+
+
+
+
+Формат ввода
+
+Первая строке входа содержит целые числа vocSize (1 ≤ vocSize ≤ 103) и sentCount (1 ≤ sentCount ≤ 10). Далее каждая из vocSize строк содержит два элемета: целове число и слово без пробелов — счетчик слова и само слово длиной ≤ 102. Далее каждая из sentCount строк содержит предложение длиной ≤ 104 без пробелов.
+         
+Формат вывода
+
+Выведите sentCount строк с входными предложениями, в которые добавлены пробелы между словами.
+         
+Пример 1
+
+
+
+Ввод
+Вывод
+
+
+
+
+9 3
+1000 the
+300 on
+300 in
+200 no
+100 not
+100 i
+100 her
+80 other
+10 son
+inotherson
+notherson
+inotheqqson
+
+in other son
+not her son
+i no the q q son
+
+
+
+
+Пример 2
+
+
+
+Ввод
+Вывод
+
+
+
+
+20 5
+781571 the
+394390 and
+344393 to
+324639 of
+276294 a
+238443 in
+180993 i
+137872 it
+137673 was
+136377 you
+134413 that
+127366 he
+113034 not
+112468 with
+111986 is
+110442 on
+95020 his
+88799 for
+79397 but
+66609 from
+withhisyouheiyouofwas
+forfromyoutothatofthat
+ionhisfortonotthethat
+thattobutaisthatonfor
+offorfromyoufromthat
+
+with his you he i you of was
+for from you to that of that
+i on his for to not the that
+that to but a is that on for
+of for from you from that
+
+
+
+
+Пример 3
+
+
+
+Ввод
+Вывод
+
+
+
+
+20 5
+781571 the
+394390 and
+344393 to
+324639 of
+276294 a
+238443 in
+180993 i
+137872 it
+137673 was
+136377 you
+134413 that
+127366 he
+113034 not
+112468 with
+111986 is
+110442 on
+95020 his
+88799 for
+79397 but
+66609 from
+withhisyouheiyouofwas
+forfromyoutothatofthat
+ionhisfortonotthethat
+thattobutaisthatonfor
+offorfromyoufromthat
+
+with his you he i you of was
+for from you to that of that
+i on his for to not the that
+that to but a is that on for
+of for from you from that
+
+
+
+
+Примечания
+
+Это задача на динамическое программирование. Может быть полезно освежить алгоритм text justification с лекции.

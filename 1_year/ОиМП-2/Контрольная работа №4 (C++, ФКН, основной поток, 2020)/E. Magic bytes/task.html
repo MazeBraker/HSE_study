@@ -1,0 +1,40 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">E. Magic bytes</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Многие типы файлов можно определить по наличию определенных байтов в их начале. </p></span><p>Например, все pdf-файлы начинаются с байтов 25 50 44 46 в шестнадцатеричной нотации (это коды символов "%PDF"). Все jpg-файлы
+         начинаются с байтов FF D8 FF. А все файлы zip-архивов начинаются с байтов 50 4B. 
+      </p>
+<p>Напишите функцию со следующим заголовком: <br/> std::string DetectType(const unsigned char* data, size_t size). 
+      </p>
+<p>Этой функции будет передан на вход указатель на начало блока байтов в памяти и размер блока. Это содержимое некоторого файла.
+         Функция должна проверить несколько первых байтов в этом блоке и вернуть одну из следующих строк: "pdf", "jpg", "zip" или "other"
+         (если файл не похож на три предыдущих формата).
+      </p>
+</div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Сдайте в систему только код функции DetectType без функции main. Не забудьте подключить библиотеку string и все другие библиотеки,
+            которые вам понадобятся.
+         </p></span></div>
+</div>

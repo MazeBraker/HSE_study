@@ -1,0 +1,58 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Ртуть</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Наступила полночь, а значит Чарльз, Людовик и пес Барбос вновь выходят на очередное дело. В этот раз они грабят товарный поезд,
+            перевозящий ценные запасы ртути. В поезде перевозится <span class="tex-math-text">N</span> видов ртути, причем <span class="tex-math-text">i</span>-ый вид в количестве <span class="tex-math-text">w<sub>i</sub></span> мг. Чарльз знает, что за <span class="tex-math-text">w<sub>i</sub></span> мг <span class="tex-math-text">i</span>-ого вида ртути они получат в награду <span class="tex-math-text">p<sub>i</sub></span> условных единиц (но только единожды, т.е. они не могут бесконечно продавать 0 мг). Конечно, если бы это было возможно, наши
+            грабители, не раздумывая, унесли бы все. Однако они знают, что если наберут ртути массой более <span class="tex-math-text">W</span> мг, то это для них кончится летально, ведь испарения ртути очень ядовиты. 
+         </p></span><p>Поскольку ртуть — жидкая, то любой ее вид можно взять в любом количестве (но не более <span class="tex-math-text">w<sub>i</sub></span>, разумеется). При этом стоимость набранного естественным образом пересчитывается, исходя из стоимости <span class="tex-math-text">p<sub>i</sub></span> за <span class="tex-math-text">w<sub>i</sub></span> мг. 
+      </p>
+<p>Помогите Чарльзу, Людовику и Барбосу получить максимальную прибыль и остаться в живых.</p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>В первой строке входного файла записано два целых числа через пробел — <span class="tex-math-text">N</span> (<span class="tex-math-text">1 ≤ N ≤ 10<sup>5</sup></span>) и <span class="tex-math-text">W</span> (<span class="tex-math-text">1 ≤ W ≤ 10<sup>12</sup></span>). Далее следует <span class="tex-math-text">N</span> строк, каждая из которых содержит два целых числа, разделенных пробелом — <span class="tex-math-text">p<sub>i</sub></span> (<span class="tex-math-text">0 ≤ p<sub>i</sub> ≤ 10000</span>) и <span class="tex-math-text">w<sub>i</sub></span> (<span class="tex-math-text">0 ≤ w<sub>i</sub> ≤ 2 ⋅ 10<sup>9</sup></span>).
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите максимальную возможную прибыль с точностью до 6 знаков после запятой.</p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3 10
+5 3
+21 7
+9 4
+</pre></td>
+<td><pre>27.750000</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

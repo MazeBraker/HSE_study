@@ -1,0 +1,111 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">A. Множество чисел</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>3 секунды</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Реализуйте структуру данных, являющуюся множеством целых чисел. Структура должна поддерживать вставку, проверку существования
+            и удаление элементов. Реализация должна основываться на хеш-таблице с разрешением коллизий методом цепочек.
+         </p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла содержит число запросов <span class="tex-math-text">N</span> (<span class="tex-math-text">0 ≤ N ≤ 10<sup>6</sup></span>). 
+         </p></span><p>Следующие <span class="tex-math-text">N</span> строк содержат запросы, представленные двумя целыми числами <span class="tex-math-text">t<sub>i</sub></span> и <span class="tex-math-text">x<sub>i</sub></span> (<span class="tex-math-text">-1 ≤ t<sub>i</sub> ≤ 1</span>, <span class="tex-math-text">|x<sub>i</sub>| ≤ 10<sup>9</sup></span>). 
+      </p>
+<p>Если <span class="tex-math-text">t<sub>i</sub></span> равняется <span class="tex-math-text">1</span>, добавьте число к множеству. Если <span class="tex-math-text">t<sub>i</sub></span> равняется <span class="tex-math-text">-1</span>, удалите число из множества. Если <span class="tex-math-text">t<sub>i</sub></span> равняется нулю, выведите <span class="tex-math-text">1</span> или <span class="tex-math-text">0</span> в зависимости от того, есть это число в множестве или нет. 
+      </p>
+<p>Не гарантируется, что на момент добавления числа, его нет в множестве. Не гарантируется, что на момент удаления числа, оно
+         есть в множестве. Повторно вставлять элементы в множество не следует, то есть это именно множество с точки зрения математики.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>На каждый запрос проверки наличия элемента выведите <span class="tex-math-text">1</span> или <span class="tex-math-text">0</span>, по одному в строке.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>9
+0 0
+1 0
+0 0
+1 0
+0 0
+-1 0
+0 0
+-1 0
+0 0
+</pre></td>
+<td><pre>0
+1
+1
+0
+0
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>10
+1 0
+1 2
+1 4
+1 6
+1 8
+0 1
+0 2
+0 3
+0 4
+0 5
+</pre></td>
+<td><pre>0
+1
+0
+1
+0
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Обратите особое внимание на выбор числа корзин и хеширующей функции. Если корзин будет слишком много, вы будете потреблять
+            слишком много памяти. Если их слишком мало, то из-за большого числа коллизий вы будете медленно обрабатывать запросы. Если
+            вы плохо выберете хеширующую функцию, это приведет к большому числу коллизий. Если вы выберете слишком сложную функцию, то
+            вы будете тратить слишком много времени на ее подсчет.
+         </p></span></div>
+</div>

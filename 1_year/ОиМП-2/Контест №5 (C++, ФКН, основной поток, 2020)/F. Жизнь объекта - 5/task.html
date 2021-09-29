@@ -1,0 +1,52 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">F. Жизнь объекта - 5</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вам дан готовый класс C, который в своих конструкторах, операторах присваивания и деструкторе печатает соответствующие сообщения.
+            Код класса можно взять здесь: <a href="https://clck.ru/AVnHc">https://clck.ru/AVnHc</a> (он такой же, как в предыдущих задачах про жизнь объектов). 
+         </p></span><p>Вам требуется написать программу, работающую с этим классом и выводящую по заданному <span class="tex-math-text">n</span> следующий текст: 
+      </p>
+<p>constructor C() 1 </p>
+<p>constructor C() 2 </p>
+<p>... </p>
+<p>constructor C() n </p>
+<p>destructor C() n </p>
+<p>... </p>
+<p>destructor C() 2 </p>
+<p>destructor C() 1 </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На вход поступает натуральное число <span class="tex-math-text">n</span>, не превосходящее 1000.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Ваша программа должна каким-либо образом создать <span class="tex-math-text">n</span> объектов типа C, а затем уничтожить их в обратном порядке.
+         </p></span></div>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>Не вставляйте код класса в решение. Используйте вместо этого директиву #include "c.h" в начале программы. Не пытайтесь вывести
+            нужный текст с помощью непосредственной печати: мы при проверке всё равно заменяем отладочные сообщения в классе на свои.
+            Программа будет скомпилирована с опцией -fno-elide-constructors.
+         </p></span></div>
+</div>

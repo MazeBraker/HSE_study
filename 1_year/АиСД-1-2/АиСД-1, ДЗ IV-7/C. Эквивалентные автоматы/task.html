@@ -1,0 +1,75 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">C. Эквивалентные автоматы</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Требуется определить, эквивалентны ли заданные автоматы, т.е. распознают ли они один и тот же язык.</p></span></div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Входной файл содержит последовательное описание двух автоматов с одним и тем же алфавитом. Каждый автомат описывается следующим
+            образом: 
+         </p></span><p>Первая строка описания содержит два числа: <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MSBcbGVxc2xhbnQgbiBcbGVxc2xhbnQgMTAwMCwgMSBcbGVxc2xhbnQgbCBcbGVxc2xhbnQgMjY=.png"/></span> — число состояний автомата и размер алфавита соответственно. 
+      </p>
+<p>Следующие <span class="tex-math-text">n</span> строк содержат по <span class="tex-math-text">l</span> чисел каждая: <span class="tex-math-text">j</span>-ое число в <span class="tex-math-text">i</span>-ой строке задает номер состояния, в которое автомат переходит из состояния <span class="tex-math-text">i</span>, прочитав символ <span class="tex-math-text">j</span>. 
+      </p>
+<p>Следующая строка содержит одно число от <span class="tex-math-text">0</span> до <span class="tex-math-text">n - 1</span> — номер начального состояния. 
+      </p>
+<p>Следующая строка содержит одно число <span class="tex-math-text">k</span>, <span class="tex-math-inline"><img class="tex-math" src="/testsys/tex/render/MCBcbGVxc2xhbnQgayBcbGVxc2xhbnQgbg==.png"/></span> — количество терминальных состояний. 
+      </p>
+<p>Следующая строка содержит <span class="tex-math-text">k</span> чисел от <span class="tex-math-text">0</span> до <span class="tex-math-text">n - 1</span> — номера терминальных состояний.
+      </p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите <span class="tex-math-text">0</span>, если автоматы не эквивалентны, и <span class="tex-math-text">1</span>, если эквивалентны.
+         </p></span></div>
+<h2>Пример</h2>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 2
+0 1
+1 1
+0
+1
+1
+
+3 2
+1 2
+0 2
+2 2
+0
+1
+2
+</pre></td>
+<td><pre>1
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

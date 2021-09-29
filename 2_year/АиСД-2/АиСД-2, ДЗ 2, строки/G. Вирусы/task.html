@@ -1,0 +1,84 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">G. Вирусы</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>256Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Комитет По Исследованию Бинарных Вирусов обнаружил, что некоторые последовательности единиц и нулей являются кодами вирусов.
+            Комитет изолировал набор кодов вирусов. Последовательность из единиц и нулей называется безопасной, если никакой ее подотрезок
+            (т.е. последовательность из соседних элементов) не является кодом вируса. Сейчас цель комитета состоит в том, чтобы установить,
+            существует ли бесконечная безопасная последовательность из единиц и нулей. 
+         </p></span><p><span style="font-weight:bold;">Указание</span>: используйте алгоритм Ахо-Корасик.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Первая строка входного файла <span class="tex-monospace">virus.in</span> содержит одно целое число <span class="tex-math-text">n</span>, равное количеству всех вирусных кодов. Каждая из следующих <span class="tex-math-text">n</span> строк содержит непустое слово, составленное из символов <span class="tex-monospace">0</span> и <span class="tex-monospace">1</span> — код вируса. Суммарная длина всех слов не превосходит <span class="tex-math-text">30 000</span>.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Первая и единственная строка выходного файла должна содержать слово: 
+            <ul>
+<li>TAK — если бесконечная, безопасная последовательность из нулей и единиц сушествует; </li>
+<li>NIE — в противном случае. </li>
+</ul>
+</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+01
+11
+00000
+</pre></td>
+<td><pre>NIE
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+011
+11
+0000
+</pre></td>
+<td><pre>TAK
+</pre></td>
+</tr>
+</tbody>
+</table>
+</div>

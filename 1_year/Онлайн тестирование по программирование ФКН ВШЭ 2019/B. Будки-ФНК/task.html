@@ -1,0 +1,110 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">B. Будки-ФНК</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Вася поступил на ФНК и поселился в общежитии в селе Будки. </p></span><p>К сожалению, дорога от Будков до ФНК пешком занимает около 6 часов в одну сторону, поэтому Вася вынужден ездить на электричке.
+         Социальную карту Вася еще не получил, поэтому ему некоторое время придётся ездить по обычным билетам. 
+      </p>
+<p>Вася рассчитал, что ему потребуется совершить <span class="tex-math-text">n</span> поездок. Васин знакомый, который перевёлся с ФНК в Рыбинский Пед, подарил Васе билет, на котором записано <span class="tex-math-text">m</span> поездок. На билет можно дополнительно записать одну поездку за <span class="tex-math-text">a</span> рублей или четыре поездки за <span class="tex-math-text">b</span> рублей. Добавлять одну или четыре поездки можно произвольное (возможно нулевое) количество раз. 
+      </p>
+<p>Помогите Васе определить, какое минимальное количество денег нужно попросить у мамы, чтобы записать на билет поездки так,
+         чтобы их стало не менее <span class="tex-math-text">n</span>. 
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>Во входных данных записаны целые числ <span class="tex-math-text">m</span> (<span class="tex-math-text">1 ≤ m ≤ 10<sup>15</sup></span>), <span class="tex-math-text">n</span> (<span class="tex-math-text">1 ≤ n ≤ 10<sup>15</sup></span>), <span class="tex-math-text">a</span> (<span class="tex-math-text">1 ≤ a ≤ 1000</span>) и <span class="tex-math-text">b</span> (<span class="tex-math-text">1 ≤ b ≤ 1000</span>) по одному в строке.
+         </p></span></div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>Выведите одно целое число — минимальное количество рублей, которое необходимо потратить, чтобы добиться того, чтобы на билете было хотя бы <span class="tex-math-text">n</span> поездок.
+         </p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>1
+3
+1
+10
+</pre></td>
+<td><pre>2
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2
+4
+9
+10
+</pre></td>
+<td><pre>10
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>3
+8
+9
+10
+</pre></td>
+<td><pre>19
+</pre></td>
+</tr>
+</tbody>
+</table>
+<h2>Примечания</h2>
+<div class="notes"><span style="">
+<p>В первом примере оптимально два раза пополнить билет на <span class="tex-math-text">1</span> поездку. 
+         </p></span><p>Во втором примере лучше один раз пополнить билет на <span class="tex-math-text">4</span> поездки (только <span class="tex-math-text">2</span> из них будут использованы). 
+      </p>
+<p>В третьем примере оптимально один раз пополнить билет на <span class="tex-math-text">1</span> поездку и <span class="tex-math-text">1</span> раз пополнить билет на <span class="tex-math-text">4</span> поездки.
+      </p>
+</div>
+</div>

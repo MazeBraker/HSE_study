@@ -1,0 +1,140 @@
+<div class="problem-statement">
+<div class="header">
+<h1 class="title">D. Города</h1>
+<table>
+<tr class="time-limit">
+<td class="property-title">Ограничение времени</td>
+<td>1 секунда</td>
+</tr>
+<tr class="memory-limit">
+<td class="property-title">Ограничение памяти</td>
+<td>64Mb</td>
+</tr>
+<tr class="input-file">
+<td class="property-title">Ввод</td>
+<td colspan="1">стандартный ввод или input.txt</td>
+</tr>
+<tr class="output-file">
+<td class="property-title">Вывод</td>
+<td colspan="1">стандартный вывод или output.txt</td>
+</tr>
+</table>
+</div>
+<h2></h2>
+<div class="legend"><span style="">
+<p>Петя и Вася играют в города. Правила игры такие: </p></span><p>
+<ul>
+<li>Петя называет любой город; </li>
+<li>Вася называет любой город, до которого можно доехать на машине из города, который назвал Петя; </li>
+<li>Петя называет любой город, до которого можно доехать на машине из последнего города, который назвал Вася; </li>
+<li>И т.д. </li>
+</ul>
+</p>
+<p>Города, называемые игроками, не должны повторяться. Если игрок не может назвать ни одного города по указанным выше правилам,
+         этот игрок проиграл. 
+      </p>
+<p>Считается, что из города <span class="tex-math-text">А</span> можно доехать на машине до города <span class="tex-math-text">B</span>, если существует последовательность городов (<span class="tex-math-text">A</span>, <span class="tex-math-text">x<sub>1</sub></span>, …, <span class="tex-math-text">x<sub>k</sub></span>, <span class="tex-math-text">B</span>), такая, что между любыми двумя соседними городами в этой последовательности есть автомобильная дорога. 
+      </p>
+<p>Петя слышал, что недавно боты OpenAI победили пятёрку профессиональных игроков в Доту. Петя хочет написать такого же бота
+         для игры в города, чтобы бот играл за Петю и всегда выигрывал. За помощью Петя обратился к вам.
+      </p>
+</div>
+<h2>Формат ввода</h2>
+<div class="input-specification"><span style="">
+<p>На вход вашей программе подаются через пробел два числа <span class="tex-math-text">n</span> и <span class="tex-math-text">m</span> (<span class="tex-math-text">1 ≤ n, m ≤ 10<sup>5</sup></span>), где <span class="tex-math-text">n</span> – число городов, <span class="tex-math-text">m</span> – число запросов к вашей программе. Далее следуют <span class="tex-math-text">m</span> строк, каждая из строк представляет собой запрос одного из двух типов: 
+         </p></span><p>
+<ul>
+<li>Символ "a" и через пробел два числа <span class="tex-math-text">b<sub>i</sub></span> и <span class="tex-math-text">c<sub>i</sub></span> (где <span class="tex-math-text">1 ≤ b<sub>i</sub>, c<sub>i</sub> ≤ n</span>) – запрос на добавление дороги между городами с номерами <span class="tex-math-text">b<sub>i</sub></span> и <span class="tex-math-text">c<sub>i</sub></span> (дороги двусторонние, нумерация городов начинается с 1). В ответ на этот запрос ничего выводить не требуется; 
+            </li>
+<li>Символ "c" – в ответ на этот запрос вы должны вывести номер города, с которого Пете надо начать игру, чтобы точно победить
+               (в текущей конфигурации дорожной сети). Если таких городов нет, выведите -1; если таких городов несколько, выведите город
+               с наименьшим номером. 
+            </li>
+</ul>
+</p>
+</div>
+<h2>Формат вывода</h2>
+<div class="output-specification"><span style="">
+<p>В ответ на каждый запрос типа "с" выведите с новой строки целое число, являющееся ответом.</p></span></div>
+<h3>Пример 1</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>2 2
+a 1 2
+c
+</pre></td>
+<td><pre>-1</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 2</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>4 8
+a 1 3
+c
+a 1 2
+c
+a 1 4
+c
+a 2 4
+c
+</pre></td>
+<td><pre>2
+1
+-1
+-1</pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Пример 3</h3>
+<table class="sample-tests">
+<thead>
+<tr>
+<th>Ввод</th>
+<th>Вывод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre>7 14
+a 2 4
+c
+a 2 6
+c
+a 2 5
+c
+a 4 7
+c
+a 4 5
+c
+a 5 6
+c
+a 5 7
+c
+</pre></td>
+<td><pre>1
+1
+1
+1
+1
+1
+1</pre></td>
+</tr>
+</tbody>
+</table>
+</div>
